@@ -7,19 +7,930 @@
 }
 .m-control.activated>button {
   color: rgb(255, 0, 0) !important;
+  
+}
+
+.m-wmcselector-select{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /** Estilos propios*/
-.info{
-  position : absolute;
-  width : 60%;
-  padding : 5px;
-  top : 10px;
-  left : 20%;
-  background : rgba(245, 245, 245, 0.8);
-  font-size : large;
-  border-radius : 5px;
-  border-style: dashed;
-  border-width: 2px;
+
+.m-areas>div.m-area>div.m-panel.m-leyenda{
+  transition: none !important;
+}
+.m-areas>div.m-area>div.m-panel.m-leyenda.collapsed>button{
+  box-shadow: none !important;
+  background-color: #00796B !important; 
+  color: #ffffff !important;
+  transition:  background-color 0.5s;
+}
+
+.m-areas>div.m-area>div.m-panel.m-leyenda.collapsed>button:hover{
+  background-color: #219c90 !important;
+}
+
+.m-areas>div.m-area>div.m-panel.m-leyenda.opened>button{
+  box-shadow: none !important;
+  position: absolute;
+  right: 500px;
+  background-color: #00796B !important; 
+  color: #ffffff !important;
+}
+
+.m-areas>div.m-area>div.m-panel.m-leyenda.opened{
+  width:500px;  
+  height: 80%;
+  background-color: #ebeeee;
+  border-left: 1px solid #00796B;
+  border-right: 3px solid #00796B;
+  border-bottom: 2px solid #00796B;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+
+.m-areas>div.m-area>div.m-panel.m-leyenda.collapsed{
+  
+  height: 40px !important;
+}
+
+.m-areas>div.m-area>div.m-panel.m-leyenda>div.m-panel-controls>div.leyenda{
+  
+  /* overflow: scroll; */
+  position: absolute !important;
+  vertical-align: middle;
+  top:40px;  
+  width: 100%;
+  margin-top: 10px;
+  
+ 
+  
+}
+
+
+.m-areas>div.m-area>div.m-panel.m-leyenda>div.m-panel-controls>div.leyenda-title{
+  width: 500px;
+  height: 27.5px;
+  background-color: #00796B;
+  color: #ffffff;  
+  text-align: center;
+  justify-items: center;
+  font-size: 15px;
+  padding-top: 12.5px;
+}
+
+
+
+.m-areas>div.m-area>div.m-panel.m-leyenda>div.m-panel-controls{
+  transition: none !important;
+ 
+}
+
+
+
+div.m-areas>div.m-area.m-top.m-right>div.m-panel.collapsed{
+  height: 40px;
+}
+
+div.m-areas>div.m-area.m-top.m-right>div.m-panel.collapsed>div.m-panel-controls{
+  display: none;
+}
+div.m-areas>div.m-area.m-top.m-right>div.m-panel.opened{
+  width: 500px;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+div.m-areas>div.m-area.m-top.m-right>div.m-panel.opened>button.m-panel-btn.g-cartografia-flecha-derecha{  
+  position: absolute;
+  float: left;
+  left: -40px;
+  background-color: #00796B;
+  color:#ffffff !important;
+}
+
+div.m-control.m-container.m-simaquery{
+  background-color: #ebeeee !important;
+  border-left: 1px solid #00796B;
+  border-right: 3px solid #00796B;
+  border-bottom: 2px solid #00796B;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.seleccionCategorias {
+  color: black;
+  text-align: left;
+ 
+}
+
+.seleccionCategorias p {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.seleccionCategorias label {
+  font-size: 13px;
+}
+
+.seleccionCategorias label:hover {
+  color: rgb(119, 116, 116);
+}
+
+#div_entornoFisico_territorio_1,
+#div_entornoFisico_territorio_2,
+#div_entornoFisico_territorio_3,
+#div_entornoFisico_medioAmbiente,
+#demografia_cifrasPoblacion_poblacion_padron,
+#demografia_cifrasPoblacion_poblacion_censo,
+#demografia_cifrasPoblacion_poblacion_censoA,
+#demografia_cifrasPoblacion_hogar,
+#demografia_movimientoPoblacion,
+#demografia_migraciones,
+#demografia_indicadoresDemograficos,
+#div_sociedad_enseñanza_centrosEducativos_centrosPublicos,
+#div_sociedad_enseñanza_centrosEducativos_centrosPrivados,
+#div_sociedad_enseñanza_alumnado_centrosPublicos,
+#div_sociedad_enseñanza_alumnado_centrosPrivados,
+#div_sociedad_enseñanza_profesorado_centrosPublicos,
+#div_sociedad_enseñanza_profesorado_centrosPrivados,
+#div_sociedad_enseñanza_unidadesGrupos,
+#div_sociedad_sanitariosSalud_recursos,
+#div_sociedad_sanitariosSalud_estado,
+#div_sociedad_edificiosViviendas_edificios,
+#div_sociedad_edificiosViviendas_viviendas,
+#div_sociedad_edificiosViviendas_establecimientos,
+#div_sociedad_elecciones_generales,
+#div_sociedad_elecciones_andalucia,
+#div_sociedad_elecciones_locales,
+#div_sociedad_culturaTiempoLibre_equipamiento_cine,
+#div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas,
+#div_sociedad_culturaTiempoLibre_equipamiento_deporte,
+#div_sociedad_culturaTiempoLibre_patrimonioHistorico,
+#div_sociedad_serviciosProteccionSocial_mapa,
+#sociedad_infraestructurasEquipamientos,
+#div_economia_agricultura_distribucion,
+#div_economia_agricultura_censo,
+#div_economia_agricultura_censoAnterior,
+#economia_ganaderia,
+#economia_pesca,
+#economia_energia,
+#div_economia_turismo_hoteles,
+#div_economia_turismo_apartamentos,
+#div_economia_turismo_campamentos,
+#div_economia_turismo_establecimientos,
+#div_economia_turismo_restaurantes,
+#economia_construccion,
+#div_economia_transporte_transporte_vehiculos,
+#div_economia_transporte_transporte_matriculaciones,
+#div_economia_transporte_transporte_conductores,
+#div_economia_transporte_autorizaciones,
+#economia_comunicaciones,
+#economia_inversiones,
+#economia_financiero,
+#div_economia_empresarial_empresas,
+#div_economia_empresarial_establecimientos,
+#div_economia_empresarial_social_cooperativas,
+#div_economia_empresarial_social_sociedades,
+#div_trabajo_trabPoblacion_censos,
+#div_trabajo_trabActividad_censos,
+#div_trabajo_trabEmpleo_censos,
+#div_trabajo_trabEmpleo_contratos,
+#div_trabajo_trabEmpleo_afiliados_trabajo,
+#div_trabajo_trabEmpleo_afiliados_residencia,
+#div_trabajo_trabParo_censos,
+#div_trabajo_trabParo_paro,
+#div_trabajo_trabParo_trabajadores,
+#div_trabajo_trabParo_demandante,
+#div_trabajo_trabParo_indicadores,
+#div_trabajo_trabPensiones_contributivas,
+#div_trabajo_trabPensiones_noContributivas,
+#div_hacienda_cuentas_locales,
+#div_hacienda_estCatastrales_urbana,
+#div_hacienda_estCatastrales_rustica,
+#div_hacienda_estCatastrales_parcelas,
+#hacienda_iae,
+#hacienda_irpf{    
+  font-family: helvetica, arial, sans-serif;
+  padding: 4px 0px 4px 0px;
+  display: none;  
+  transition: all 0.5s ease;  
+}
+
+#div_entornoFisico_territorio_1 input[type=checkbox],
+#div_entornoFisico_territorio_2 input[type=checkbox],
+#div_entornoFisico_territorio_3 input[type=checkbox],
+#div_entornoFisico_medioAmbiente input[type=checkbox],
+#demografia_cifrasPoblacion_poblacion_padron input[type=checkbox],
+#demografia_cifrasPoblacion_poblacion_censo input[type=checkbox],
+#demografia_cifrasPoblacion_poblacion_censoA input[type=checkbox],
+#demografia_cifrasPoblacion_hogar input[type=checkbox],
+#demografia_movimientoPoblacion input[type=checkbox],
+#demografia_migraciones input[type=checkbox],
+#demografia_indicadoresDemograficos input[type=checkbox],
+#div_sociedad_enseñanza_centrosEducativos_centrosPublicos input[type=checkbox],
+#div_sociedad_enseñanza_centrosEducativos_centrosPrivados input[type=checkbox],
+#div_sociedad_enseñanza_alumnado_centrosPublicos input[type=checkbox],
+#div_sociedad_enseñanza_alumnado_centrosPrivados input[type=checkbox],
+#div_sociedad_enseñanza_profesorado_centrosPublicos input[type=checkbox],
+#div_sociedad_enseñanza_profesorado_centrosPrivados input[type=checkbox],
+#div_sociedad_enseñanza_unidadesGrupos input[type=checkbox],
+#div_sociedad_sanitariosSalud_recursos input[type=checkbox],
+#div_sociedad_sanitariosSalud_estado input[type=checkbox],
+#div_sociedad_edificiosViviendas_edificios input[type=checkbox],
+#div_sociedad_edificiosViviendas_viviendas input[type=checkbox],
+#div_sociedad_edificiosViviendas_establecimientos input[type=checkbox],
+#div_sociedad_elecciones_generales input[type=checkbox],
+#div_sociedad_elecciones_andalucia input[type=checkbox],
+#div_sociedad_elecciones_locales input[type=checkbox],
+#div_sociedad_culturaTiempoLibre_equipamiento_cine input[type=checkbox],
+#div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas input[type=checkbox],
+#div_sociedad_culturaTiempoLibre_equipamiento_deporte input[type=checkbox],
+#div_sociedad_culturaTiempoLibre_patrimonioHistorico input[type=checkbox],
+#div_sociedad_serviciosProteccionSocial_mapa input[type=checkbox],
+#sociedad_infraestructurasEquipamientos input[type=checkbox],
+#div_economia_agricultura_distribucion input[type=checkbox],
+#div_economia_agricultura_censo input[type=checkbox],
+#div_economia_agricultura_censoAnterior input[type=checkbox],
+#economia_ganaderia input[type=checkbox],
+#economia_pesca input[type=checkbox],
+#economia_energia input[type=checkbox],
+#div_economia_turismo_hoteles input[type=checkbox],
+#div_economia_turismo_apartamentos input[type=checkbox],
+#div_economia_turismo_campamentos input[type=checkbox],
+#div_economia_turismo_establecimientos input[type=checkbox],
+#div_economia_turismo_restaurantes input[type=checkbox],
+#economia_construccion input[type=checkbox],
+#div_economia_transporte_transporte_vehiculos input[type=checkbox],
+#div_economia_transporte_transporte_matriculaciones input[type=checkbox],
+#div_economia_transporte_transporte_conductores input[type=checkbox],
+#div_economia_transporte_autorizaciones input[type=checkbox],
+#economia_comunicaciones input[type=checkbox],
+#economia_inversiones input[type=checkbox],
+#economia_financiero input[type=checkbox],
+#div_economia_empresarial_empresas input[type=checkbox],
+#div_economia_empresarial_establecimientos input[type=checkbox],
+#div_economia_empresarial_social_cooperativas input[type=checkbox],
+#div_economia_empresarial_social_sociedades input[type=checkbox],
+#div_trabajo_trabPoblacion_censos input[type=checkbox],
+#div_trabajo_trabActividad_censos input[type=checkbox],
+#div_trabajo_trabEmpleo_censos input[type=checkbox],
+#div_trabajo_trabEmpleo_contratos input[type=checkbox],
+#div_trabajo_trabEmpleo_afiliados_trabajo input[type=checkbox],
+#div_trabajo_trabEmpleo_afiliados_residencia input[type=checkbox],
+#div_trabajo_trabParo_censos input[type=checkbox],
+#div_trabajo_trabParo_paro input[type=checkbox],
+#div_trabajo_trabParo_trabajadores input[type=checkbox],
+#div_trabajo_trabParo_demandante input[type=checkbox],
+#div_trabajo_trabParo_indicadores input[type=checkbox],
+#div_trabajo_trabPensiones_contributivas input[type=checkbox],
+#div_trabajo_trabPensiones_noContributivas input[type=checkbox],
+#div_hacienda_cuentas_locales input[type=checkbox],
+#div_hacienda_estCatastrales_urbana input[type=checkbox],
+#div_hacienda_estCatastrales_rustica input[type=checkbox],
+#div_hacienda_estCatastrales_parcelas input[type=checkbox],
+#hacienda_iae input[type=checkbox],
+#hacienda_irpf input[type=checkbox]{    
+  display: none;
+}
+
+#div_entornoFisico_territorio_1 label,
+#div_entornoFisico_territorio_2 label,
+#div_entornoFisico_territorio_3 label,
+#div_entornoFisico_medioAmbiente label,
+#demografia_cifrasPoblacion_poblacion_padron label,
+#demografia_cifrasPoblacion_poblacion_censo label,
+#demografia_cifrasPoblacion_poblacion_censoA label,
+#demografia_cifrasPoblacion_hogar label,
+#demografia_movimientoPoblacion label,
+#demografia_migraciones label,
+#demografia_indicadoresDemograficos label,
+#div_sociedad_enseñanza_centrosEducativos_centrosPublicos label,
+#div_sociedad_enseñanza_centrosEducativos_centrosPrivados label,
+#div_sociedad_enseñanza_alumnado_centrosPublicos label,
+#div_sociedad_enseñanza_alumnado_centrosPrivados label,
+#div_sociedad_enseñanza_profesorado_centrosPublicos label,
+#div_sociedad_enseñanza_profesorado_centrosPrivados label,
+#div_sociedad_enseñanza_unidadesGrupos label,
+#div_sociedad_sanitariosSalud_recursos label,
+#div_sociedad_sanitariosSalud_estado label,
+#div_sociedad_edificiosViviendas_edificios label,
+#div_sociedad_edificiosViviendas_viviendas label,
+#div_sociedad_edificiosViviendas_establecimientos label,
+#div_sociedad_elecciones_generales label,
+#div_sociedad_elecciones_andalucia label,
+#div_sociedad_elecciones_locales label,
+#div_sociedad_culturaTiempoLibre_equipamiento_cine label,
+#div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas label,
+#div_sociedad_culturaTiempoLibre_equipamiento_deporte label,
+#div_sociedad_culturaTiempoLibre_patrimonioHistorico label,
+#div_sociedad_serviciosProteccionSocial_mapa label,
+#sociedad_infraestructurasEquipamientos label,
+#div_economia_agricultura_distribucion label,
+#div_economia_agricultura_censo label,
+#div_economia_agricultura_censoAnterior label,
+#economia_ganaderia label,
+#economia_pesca label,
+#economia_energia label,
+#div_economia_turismo_hoteles label,
+#div_economia_turismo_apartamentos label,
+#div_economia_turismo_campamentos label,
+#div_economia_turismo_establecimientos label,
+#div_economia_turismo_restaurantes label,
+#economia_construccion label,
+#div_economia_transporte_transporte_vehiculos label,
+#div_economia_transporte_transporte_matriculaciones label,
+#div_economia_transporte_transporte_conductores label,
+#div_economia_transporte_autorizaciones label,
+#economia_comunicaciones label,
+#economia_inversiones label,
+#economia_financiero label,
+#div_economia_empresarial_empresas label,
+#div_economia_empresarial_establecimientos label,
+#div_economia_empresarial_social_cooperativas label,
+#div_economia_empresarial_social_sociedades label,
+#div_trabajo_trabPoblacion_censos label,
+#div_trabajo_trabActividad_censos label,
+#div_trabajo_trabEmpleo_censos label,
+#div_trabajo_trabEmpleo_contratos label,
+#div_trabajo_trabEmpleo_afiliados_trabajo label,
+#div_trabajo_trabEmpleo_afiliados_residencia label,
+#div_trabajo_trabParo_censos label,
+#div_trabajo_trabParo_paro label,
+#div_trabajo_trabParo_trabajadores label,
+#div_trabajo_trabParo_demandante label,
+#div_trabajo_trabParo_indicadores label,
+#div_trabajo_trabPensiones_contributivas label,
+#div_trabajo_trabPensiones_noContributivas label,
+#div_hacienda_cuentas_locales label,
+#div_hacienda_estCatastrales_urbana label,
+#div_hacienda_estCatastrales_rustica label,
+#div_hacienda_estCatastrales_parcelas label,
+#hacienda_iae label,
+#hacienda_irpf label{
+  font-family: helvetica, arial, sans-serif;
+  font-size: 0.9em;
+  padding: 5px 10px 3px 22px;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  user-select: none;  
+}
+
+#div_entornoFisico_territorio_1 label:before,
+#div_entornoFisico_territorio_2 label:before,
+#div_entornoFisico_territorio_3 label:before,
+#div_entornoFisico_medioAmbiente label:before,
+#demografia_cifrasPoblacion_poblacion_padron label:before,
+#demografia_cifrasPoblacion_poblacion_censo label:before,
+#demografia_cifrasPoblacion_poblacion_censoA label:before,
+#demografia_cifrasPoblacion_hogar label:before,
+#demografia_movimientoPoblacion label:before,
+#demografia_migraciones label:before,
+#demografia_indicadoresDemograficos label:before,
+#div_sociedad_enseñanza_centrosEducativos_centrosPublicos label:before,
+#div_sociedad_enseñanza_centrosEducativos_centrosPrivados label:before,
+#div_sociedad_enseñanza_alumnado_centrosPublicos label:before,
+#div_sociedad_enseñanza_alumnado_centrosPrivados label:before,
+#div_sociedad_enseñanza_profesorado_centrosPublicos label:before,
+#div_sociedad_enseñanza_profesorado_centrosPrivados label:before,
+#div_sociedad_enseñanza_unidadesGrupos label:before,
+#div_sociedad_sanitariosSalud_recursos label:before,
+#div_sociedad_sanitariosSalud_estado label:before,
+#div_sociedad_edificiosViviendas_edificios label:before,
+#div_sociedad_edificiosViviendas_viviendas label:before,
+#div_sociedad_edificiosViviendas_establecimientos label:before,
+#div_sociedad_elecciones_generales label:before,
+#div_sociedad_elecciones_andalucia label:before,
+#div_sociedad_elecciones_locales label:before,
+#div_sociedad_culturaTiempoLibre_equipamiento_cine label:before,
+#div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas label:before,
+#div_sociedad_culturaTiempoLibre_equipamiento_deporte label:before,
+#div_sociedad_culturaTiempoLibre_patrimonioHistorico label:before,
+#div_sociedad_serviciosProteccionSocial_mapa label:before,
+#sociedad_infraestructurasEquipamientos label:before,
+#div_economia_agricultura_distribucion label:before,
+#div_economia_agricultura_censo label:before,
+#div_economia_agricultura_censoAnterior label:before,
+#economia_ganaderia label:before,
+#economia_pesca label:before,
+#economia_energia label:before,
+#div_economia_turismo_hoteles label:before,
+#div_economia_turismo_apartamentos label:before,
+#div_economia_turismo_campamentos label:before,
+#div_economia_turismo_establecimientos label:before,
+#div_economia_turismo_restaurantes label:before,
+#economia_construccion label:before,
+#div_economia_transporte_transporte_vehiculos label:before,
+#div_economia_transporte_transporte_matriculaciones label:before,
+#div_economia_transporte_transporte_conductores label:before,
+#div_economia_transporte_autorizaciones label:before,
+#economia_comunicaciones label:before,
+#economia_inversiones label:before,
+#economia_financiero label:before,
+#div_economia_empresarial_empresas label:before,
+#div_economia_empresarial_establecimientos label:before,
+#div_economia_empresarial_social_cooperativas label:before,
+#div_economia_empresarial_social_sociedades label:before,
+#div_trabajo_trabPoblacion_censos label:before,
+#div_trabajo_trabActividad_censos label:before,
+#div_trabajo_trabEmpleo_censos label:before,
+#div_trabajo_trabEmpleo_contratos label:before,
+#div_trabajo_trabEmpleo_afiliados_trabajo label:before,
+#div_trabajo_trabEmpleo_afiliados_residencia label:before,
+#div_trabajo_trabParo_censos label:before,
+#div_trabajo_trabParo_paro label:before,
+#div_trabajo_trabParo_trabajadores label:before,
+#div_trabajo_trabParo_demandante label:before,
+#div_trabajo_trabParo_indicadores label:before,
+#div_trabajo_trabPensiones_contributivas label:before,
+#div_trabajo_trabPensiones_noContributivas label:before,
+#div_hacienda_cuentas_locales label:before,
+#div_hacienda_estCatastrales_urbana label:before,
+#div_hacienda_estCatastrales_rustica label:before,
+#div_hacienda_estCatastrales_parcelas label:before,
+#hacienda_iae label:before,
+#hacienda_irpf label:before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background:none;
+  border: 3px solid #00796B;
+  border-radius: 20%;
+  position: absolute;
+  left: 0px;
+}
+
+#div_entornoFisico_territorio_1 input[type=checkbox]:checked + label,
+#div_entornoFisico_territorio_2 input[type=checkbox]:checked + label,
+#div_entornoFisico_territorio_3 input[type=checkbox]:checked + label,
+#div_entornoFisico_medioAmbiente input[type=checkbox]:checked + label,
+#demografia_cifrasPoblacion_poblacion_padron input[type=checkbox]:checked + label,
+#demografia_cifrasPoblacion_poblacion_censo input[type=checkbox]:checked + label,
+#demografia_cifrasPoblacion_poblacion_censoA input[type=checkbox]:checked + label,
+#demografia_cifrasPoblacion_hogar input[type=checkbox]:checked + label,
+#demografia_movimientoPoblacion input[type=checkbox]:checked + label,
+#demografia_migraciones input[type=checkbox]:checked + label,
+#demografia_indicadoresDemograficos input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_centrosEducativos_centrosPublicos input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_centrosEducativos_centrosPrivados input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_alumnado_centrosPublicos input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_alumnado_centrosPrivados input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_profesorado_centrosPublicos input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_profesorado_centrosPrivados input[type=checkbox]:checked + label,
+#div_sociedad_enseñanza_unidadesGrupos input[type=checkbox]:checked + label,
+#div_sociedad_sanitariosSalud_recursos input[type=checkbox]:checked + label,
+#div_sociedad_sanitariosSalud_estado input[type=checkbox]:checked + label,
+#div_sociedad_edificiosViviendas_edificios input[type=checkbox]:checked + label,
+#div_sociedad_edificiosViviendas_viviendas input[type=checkbox]:checked + label,
+#div_sociedad_edificiosViviendas_establecimientos input[type=checkbox]:checked + label,
+#div_sociedad_elecciones_generales input[type=checkbox]:checked + label,
+#div_sociedad_elecciones_andalucia input[type=checkbox]:checked + label,
+#div_sociedad_elecciones_locales input[type=checkbox]:checked + label,
+#div_sociedad_culturaTiempoLibre_equipamiento_cine input[type=checkbox]:checked + label,
+#div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas input[type=checkbox]:checked + label,
+#div_sociedad_culturaTiempoLibre_equipamiento_deporte input[type=checkbox]:checked + label,
+#div_sociedad_culturaTiempoLibre_patrimonioHistorico input[type=checkbox]:checked + label,
+#div_sociedad_serviciosProteccionSocial_mapa input[type=checkbox]:checked + label,
+#sociedad_infraestructurasEquipamientos input[type=checkbox]:checked + label,
+#div_economia_agricultura_distribucion input[type=checkbox]:checked + label,
+#div_economia_agricultura_censo input[type=checkbox]:checked + label,
+#div_economia_agricultura_censoAnterior input[type=checkbox]:checked + label,
+#economia_ganaderia input[type=checkbox]:checked + label,
+#economia_pesca input[type=checkbox]:checked + label,
+#economia_energia input[type=checkbox]:checked + label,
+#div_economia_turismo_hoteles input[type=checkbox]:checked + label,
+#div_economia_turismo_apartamentos input[type=checkbox]:checked + label,
+#div_economia_turismo_campamentos input[type=checkbox]:checked + label,
+#div_economia_turismo_establecimientos input[type=checkbox]:checked + label,
+#div_economia_turismo_restaurantes input[type=checkbox]:checked + label,
+#economia_construccion input[type=checkbox]:checked + label,
+#div_economia_transporte_transporte_vehiculos input[type=checkbox]:checked + label,
+#div_economia_transporte_transporte_matriculaciones input[type=checkbox]:checked + label,
+#div_economia_transporte_transporte_conductores input[type=checkbox]:checked + label,
+#div_economia_transporte_autorizaciones input[type=checkbox]:checked + label,
+#economia_comunicaciones input[type=checkbox]:checked + label,
+#economia_inversiones input[type=checkbox]:checked + label,
+#economia_financiero input[type=checkbox]:checked + label,
+#div_economia_empresarial_empresas input[type=checkbox]:checked + label,
+#div_economia_empresarial_establecimientos input[type=checkbox]:checked + label,
+#div_economia_empresarial_social_cooperativas input[type=checkbox]:checked + label,
+#div_economia_empresarial_social_sociedades input[type=checkbox]:checked + label,
+#div_trabajo_trabPoblacion_censos input[type=checkbox]:checked + label,
+#div_trabajo_trabActividad_censos input[type=checkbox]:checked + label,
+#div_trabajo_trabEmpleo_censos input[type=checkbox]:checked + label,
+#div_trabajo_trabEmpleo_contratos input[type=checkbox]:checked + label,
+#div_trabajo_trabEmpleo_afiliados_trabajo input[type=checkbox]:checked + label,
+#div_trabajo_trabEmpleo_afiliados_residencia input[type=checkbox]:checked + label,
+#div_trabajo_trabParo_censos input[type=checkbox]:checked + label,
+#div_trabajo_trabParo_paro input[type=checkbox]:checked + label,
+#div_trabajo_trabParo_trabajadores input[type=checkbox]:checked + label,
+#div_trabajo_trabParo_demandante input[type=checkbox]:checked + label,
+#div_trabajo_trabParo_indicadores input[type=checkbox]:checked + label,
+#div_trabajo_trabPensiones_contributivas input[type=checkbox]:checked + label,
+#div_trabajo_trabPensiones_noContributivas input[type=checkbox]:checked + label,
+#div_hacienda_cuentas_locales input[type=checkbox]:checked + label,
+#div_hacienda_estCatastrales_urbana input[type=checkbox]:checked + label,
+#div_hacienda_estCatastrales_rustica input[type=checkbox]:checked + label,
+#div_hacienda_estCatastrales_parcelas input[type=checkbox]:checked + label,
+#hacienda_iae input[type=checkbox]:checked + label,
+#hacienda_irpf input[type=checkbox]:checked + label{
+  padding: 5px 10px 3px 22px;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  color: #00796B; 
+  
+}
+
+#div_entornoFisico_territorio_1 input[type=checkbox]:checked + label:before,
+#div_entornoFisico_territorio_2 input[type=checkbox]:checked + label:before,
+#div_entornoFisico_territorio_3 input[type=checkbox]:checked + label:before,
+#div_entornoFisico_medioAmbiente input[type=checkbox]:checked + label:before,
+#demografia_cifrasPoblacion_poblacion_padron input[type=checkbox]:checked + label:before,
+#demografia_cifrasPoblacion_poblacion_censo input[type=checkbox]:checked + label:before,
+#demografia_cifrasPoblacion_poblacion_censoA input[type=checkbox]:checked + label:before,
+#demografia_cifrasPoblacion_hogar input[type=checkbox]:checked + label:before,
+#demografia_movimientoPoblacion input[type=checkbox]:checked + label:before,
+#demografia_migraciones input[type=checkbox]:checked + label:before,
+#demografia_indicadoresDemograficos input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_centrosEducativos_centrosPublicos input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_centrosEducativos_centrosPrivados input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_alumnado_centrosPublicos input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_alumnado_centrosPrivados input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_profesorado_centrosPublicos input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_profesorado_centrosPrivados input[type=checkbox]:checked + label:before,
+#div_sociedad_enseñanza_unidadesGrupos input[type=checkbox]:checked + label:before,
+#div_sociedad_sanitariosSalud_recursos input[type=checkbox]:checked + label:before,
+#div_sociedad_sanitariosSalud_estado input[type=checkbox]:checked + label:before,
+#div_sociedad_edificiosViviendas_edificios input[type=checkbox]:checked + label:before,
+#div_sociedad_edificiosViviendas_viviendas input[type=checkbox]:checked + label:before,
+#div_sociedad_edificiosViviendas_establecimientos input[type=checkbox]:checked + label:before,
+#div_sociedad_elecciones_generales input[type=checkbox]:checked + label:before,
+#div_sociedad_elecciones_andalucia input[type=checkbox]:checked + label:before,
+#div_sociedad_elecciones_locales input[type=checkbox]:checked + label:before,
+#div_sociedad_culturaTiempoLibre_equipamiento_cine input[type=checkbox]:checked + label:before,
+#div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas input[type=checkbox]:checked + label:before,
+#div_sociedad_culturaTiempoLibre_equipamiento_deporte input[type=checkbox]:checked + label:before,
+#div_sociedad_culturaTiempoLibre_patrimonioHistorico input[type=checkbox]:checked + label:before,
+#div_sociedad_serviciosProteccionSocial_mapa input[type=checkbox]:checked + label:before,
+#sociedad_infraestructurasEquipamientos input[type=checkbox]:checked + label:before,
+#div_economia_agricultura_distribucion input[type=checkbox]:checked + label:before,
+#div_economia_agricultura_censo input[type=checkbox]:checked + label:before,
+#div_economia_agricultura_censoAnterior input[type=checkbox]:checked + label:before,
+#economia_ganaderia input[type=checkbox]:checked + label:before,
+#economia_pesca input[type=checkbox]:checked + label:before,
+#economia_energia input[type=checkbox]:checked + label:before,
+#div_economia_turismo_hoteles input[type=checkbox]:checked + label:before,
+#div_economia_turismo_apartamentos input[type=checkbox]:checked + label:before,
+#div_economia_turismo_campamentos input[type=checkbox]:checked + label:before,
+#div_economia_turismo_establecimientos input[type=checkbox]:checked + label:before,
+#div_economia_turismo_restaurantes input[type=checkbox]:checked + label:before,
+#economia_construccion input[type=checkbox]:checked + label:before,
+#div_economia_transporte_transporte_vehiculos input[type=checkbox]:checked + label:before,
+#div_economia_transporte_transporte_matriculaciones input[type=checkbox]:checked + label:before,
+#div_economia_transporte_transporte_conductores input[type=checkbox]:checked + label:before,
+#div_economia_transporte_autorizaciones input[type=checkbox]:checked + label:before,
+#economia_comunicaciones input[type=checkbox]:checked + label:before,
+#economia_inversiones input[type=checkbox]:checked + label:before,
+#economia_financiero input[type=checkbox]:checked + label:before,
+#div_economia_empresarial_empresas input[type=checkbox]:checked + label:before,
+#div_economia_empresarial_establecimientos input[type=checkbox]:checked + label:before,
+#div_economia_empresarial_social_cooperativas input[type=checkbox]:checked + label:before,
+#div_economia_empresarial_social_sociedades input[type=checkbox]:checked + label:before,
+#div_trabajo_trabPoblacion_censos input[type=checkbox]:checked + label:before,
+#div_trabajo_trabActividad_censos input[type=checkbox]:checked + label:before,
+#div_trabajo_trabEmpleo_censos input[type=checkbox]:checked + label:before,
+#div_trabajo_trabEmpleo_contratos input[type=checkbox]:checked + label:before,
+#div_trabajo_trabEmpleo_afiliados_trabajo input[type=checkbox]:checked + label:before,
+#div_trabajo_trabEmpleo_afiliados_residencia input[type=checkbox]:checked + label:before,
+#div_trabajo_trabParo_censos input[type=checkbox]:checked + label:before,
+#div_trabajo_trabParo_paro input[type=checkbox]:checked + label:before,
+#div_trabajo_trabParo_trabajadores input[type=checkbox]:checked + label:before,
+#div_trabajo_trabParo_demandante input[type=checkbox]:checked + label:before,
+#div_trabajo_trabParo_indicadores input[type=checkbox]:checked + label:before,
+#div_trabajo_trabPensiones_contributivas input[type=checkbox]:checked + label:before,
+#div_trabajo_trabPensiones_noContributivas input[type=checkbox]:checked + label:before,
+#div_hacienda_cuentas_locales input[type=checkbox]:checked + label:before,
+#div_hacienda_estCatastrales_urbana input[type=checkbox]:checked + label:before,
+#div_hacienda_estCatastrales_rustica input[type=checkbox]:checked + label:before,
+#div_hacienda_estCatastrales_parcelas input[type=checkbox]:checked + label:before,
+#hacienda_iae input[type=checkbox]:checked + label:before,
+#hacienda_irpf input[type=checkbox]:checked + label:before{
+  width: 11px;
+  height: 5px;
+  border-bottom: 3px solid #00796B;
+  border-left: 3px solid #00796B;
+  border-radius: 0%;
+  border-top: none;
+  border-right: none;
+  background:none;    
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;  
+}
+
+.buscador-panel-title{
+  width: 500px;
+  height: 27.5px;
+  background-color: #00796B;
+  color: #ffffff;  
+  text-align: center;
+  justify-items: center;
+  font-size: 15px;
+  padding-top: 12.5px;  
+}
+
+#buscador-panel-body{
+  margin-left: 20px;
+}
+
+#content-panel{
+  margin-right: 20px; 
+  background-color: #fcfcfc; 
+  padding: 10px 10px 10px 30px;
+  margin: 10px 15px 15px 0px;
+  border-radius: 10px 40px 10px 10px;
+  border: 1.5px solid #00796B;
+  max-height: 800px; 
+  overflow: hidden; 
+}
+
+#content-panel div ul li{
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#content-panel div ul li:hover{
+  color: #00796B;
+}
+
+#content-panel div ul{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+#content-panel h3{
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#content-panel h3:hover{
+  color: #00796B;
+}
+
+#entornoFisico{
+  display: none; 
+}
+#demografia{
+  display: none; 
+}
+#sociedad{
+  display: none; 
+}
+#economia{
+  display: none; 
+}
+#trabajo{
+  display: none; 
+}
+#hacienda{
+  display: none; 
+}
+
+
+#entornoFisico_territorio{
+  display: none; 
+}
+
+#demografia_cifrasPoblacion{
+  display: none;  
+}
+#demografia_cifrasPoblacion_poblacion{
+  display: none;  
+}
+#demografia_movimientoPoblacion{
+  display: none;  
+}
+#demografia_migraciones{
+  display: none;  
+}
+
+#demografia_indicadoresDemograficos{
+  display: none;  
+}
+#sociedad_enseñanza{
+  display: none;  
+}
+#sociedad_sanitariosSalud{
+  display: none;  
+}
+#sociedad_edificiosViviendas{
+  display: none;  
+}
+#sociedad_elecciones{
+  display: none;  
+}
+#sociedad_culturaTiempoLibre{
+  display: none;  
+}
+#sociedad_serviciosProteccionSocial{
+  display: none;  
+}
+#sociedad_infraestructurasEquipamientos{
+  display: none;  
+}
+#economia_agricultura{
+  display: none;  
+}
+#economia_ganaderia{
+  display: none;  
+}
+#economia_pesca{
+  display: none;  
+}
+#economia_energia{
+  display: none;  
+}
+#economia_turismo{
+  display: none;  
+}
+#economia_construccion{
+  display: none;  
+}
+#economia_transporte{
+  display: none;  
+}
+#economia_comunicaciones{
+  display: none;  
+}
+#economia_inversiones{
+  display: none;
+}
+#economia_financiero{
+  display: none;
+}
+#economia_empresarial{
+  display: none;
+}
+#trabajo_trabPoblacion{
+  display: none;
+}
+#trabajo_trabActividad{
+  display: none;
+}
+#trabajo_trabEmpleo{
+  display: none;
+}
+#trabajo_trabParo{
+  display: none;
+}
+#trabajo_trabPensiones{
+  display: none;
+}
+#hacienda_cuentas{
+  display: none;
+}
+#hacienda_estCatastrales{
+  display: none;
+}
+#hacienda_iae{
+  display: none;
+}
+#hacienda_irpf{
+  display: none;
+}
+#div_sociedad_enseñanza_centrosEducativos{
+  display: none;
+}
+#div_sociedad_enseñanza_alumnado{
+  display: none;
+}
+#div_sociedad_enseñanza_profesorado{
+  display: none;
+}
+#div_sociedad_culturaTiempoLibre_equipamiento{
+  display: none;
+}
+#div_economia_transporte_transporte{
+  display: none;
+}
+#div_economia_empresarial_social{
+  display: none;
+}
+#div_trabajo_trabEmpleo_afiliados{
+  display: none;
+}
+#respuesta_servidor{
+  display: none;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;  
+  animation: blinker 1s linear infinite;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+table.resultado{
+  
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-spacing: 0px;
+  width: 80% !important;
+  height: max-content;
+  margin-left: 10% !important;   
+  border-top: 2px solid #00796B;
+  border-left: 2px solid #00796B;
+  border-right: 2px solid #00796B;
+  border-bottom: 1px solid #00796B;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 5px; */
+  /* border-radius: 10px; */
+  overflow: hidden;
+}
+/* table.resultado tr{
+  border-bottom: 1px solid black;
+} */
+
+
+table.resultado th {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #000000;
+  font-weight: bold;
+  /* border-collapse: collapse; */
+  background-color: #c6f3ee;
+  border-bottom: 1px solid #00796B;
+  /* border: 0px 0px 1px 0px solid black; */
+  width: 70% !important;
+}
+
+th.cabecera {
+  background-color: #98c0bb !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* color:#ffffff !important; */
+ 
+}
+
+th.cabecera2 {
+  background-color: #bfd4d2 !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* color:#ffffff !important; */
+ 
+}
+
+table.resultado td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  /* color: aquamarine; */
+  /* border-collapse: collapse; */
+  /* border-top: 1px solid black; */
+  border-left: 1px solid #00796B;
+  border-bottom: 1px solid #00796B;
+  /* border: 1px 0px 0px 1px solid black; */
+  width: 30% !important;
+  background-color: #f9fffc;
   text-align: center;
 }
+
+div.loading{
+  background-color: #e7e7e7;
+  position: absolute;
+  display: none;
+  top:0;  
+  left: 0; 
+  margin:0px auto; 
+  vertical-align: middle;  
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 0.7;
+}
+
+div.loading img {
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 40%; 
+  width: 20%;
+  /* height: 20%;  */
+}
+

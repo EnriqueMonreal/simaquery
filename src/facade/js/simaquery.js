@@ -16,7 +16,7 @@ export default class SimaQuery extends M.Plugin {
    * @param {Object} impl implementation object
    * @api stable
    */
-  constructor() {
+  constructor(config) {
     super();
     /**
      * Facade of the map
@@ -24,6 +24,7 @@ export default class SimaQuery extends M.Plugin {
      * @type {M.Map}
      */
     this.map_ = null;
+    this.config = config;
 
     /**
      * Array of controls
@@ -48,8 +49,9 @@ export default class SimaQuery extends M.Plugin {
    * @param {M.Map} map the map to add the plugin
    * @api stable
    */
-  addTo(map) {
-    this.controls_.push(new SimaQueryControl());
+  addTo(map) {    
+    this.controls_.push(new SimaQueryControl(this.config));
+    this.controls_.push(this.control_);
     this.map_ = map;
     // panel para agregar control - no obligatorio
     this.panel_ = new M.ui.Panel('panelSimaQuery', {
@@ -59,6 +61,7 @@ export default class SimaQuery extends M.Plugin {
     });
     this.panel_.addControls(this.controls_);
     map.addPanels(this.panel_);
+   
   }
 
   /**

@@ -1,3 +1,1438 @@
-<div id="div-contenedor" class="m-control m-container m-simaquery">
-  <button id="ctrlTest" class="g-cartografia-bandera" title="AddFeature"></button>
+<div id='div-contenedor' class='m-control m-container m-simaquery'>
+  <div id='buscador-panel'>
+    <div class='buscador-panel-title'>Sistema de Información Multiterritorial de Andalucía (SIMA)</div>
+    <div id='buscador-panel-body'>
+      <div id='content-panel'>
+        <h3 id='title_entornoFisico'>1. Entorno físico y medio ambiente</h3>
+        <div id='entornoFisico'>
+          <ul>
+            <li id='territorio'>1.1. Territorio</li>
+            <div id='entornoFisico_territorio'>
+              <ul>
+                <li id='entornoFisico_territorio_1'>1.1.1. Caracteristicas geográficas</li>
+                <div id='div_entornoFisico_territorio_1'>
+                  <form id='form_entornoFisico_territorio_1' class='seleccionCategorias'>
+                    <input type='checkbox' id='1_1_1_1' name='1_1_1_1' value='Km²'>
+                    <label for='1_1_1_1'> 1.1.1.1. Extensión superficial</label><br>
+                    <input type='checkbox' id='1_1_1_2' name='1_1_1_2' value='grados,grados,m.'>
+                    <label for='1_1_1_2'>1.1.1.2. Latitud, longitud y altitud sobre el nivel de mar</label><br>
+                    <input type='checkbox' id='1_1_1_3' name='1_1_1_3' value='Km²'>
+                    <label for='1_1_1_3'>1.1.1.3. Extensión superficial por zonas altimétricas</label><br>
+                    <input type='checkbox' id='1_1_1_4' name='1_1_1_4' value='Ha.'>
+                    <label for='1_1_1_4'>1.1.1.4. Distribución general de la tierra</label><br>
+                    <input type='checkbox' id='1_1_1_5' name='1_1_1_5' value='Núcleos'>
+                    <label for='1_1_1_5'>1.1.1.5. Número de núcleos de población que componen el municipio</label><br>
+                    <input type='checkbox' id='1_1_1_6' name='1_1_1_6' value='Porcentaje'>
+                    <label for='1_1_1_6'>1.1.1.6. Grado de urbanización y porcentaje de población según tipología de
+                      celda</label><br>
+                    <input type='checkbox' id='1_1_1_7' name='1_1_1_7' value='Hab/Km²'>
+                    <label for='1_1_1_7'>1.1.1.7. Densidad de población</label><br>
+                  </form>
+                </div>
+                <li id='entornoFisico_territorio_2'>1.1.2. Situación</li>
+                <div id='div_entornoFisico_territorio_2'>
+                  <form id='form_entornoFisico_territorio_2' class='seleccionCategorias'>
+                    <input type='checkbox' id='1_1_2_1' name='1_1_2_1' value='Km'>
+                    <label for='1_1_2_1'> 1.1.2.1. Distancia a la capital</label><br>
+                  </form>
+                </div>
+                <li id='entornoFisico_territorio_3'>1.1.3. Características del suelo</li>
+                <div id='div_entornoFisico_territorio_3'>
+                  <form id='form_entornoFisico_territorio_3' class='seleccionCategorias'>
+                    <input type='checkbox' id='1_1_3_1' name='1_1_3_1' value='Ha.'>
+                    <label for='1_1_3_1'> 1.1.3.1. Sistema de Información de Ocupación del Suelo de España en
+                      Andalucía</label><br>
+                    <input type='checkbox' id='1_1_3_2' name='1_1_3_2' value='Ha.'>
+                    <label for='1_1_3_2'>1.1.3.2. Sistema de Información de Ocupación del Suelo de España en Andalucía.
+                      Agrícola. Nivel 2</label><br>
+                    <input type='checkbox' id='1_1_3_3' name='1_1_3_3' value='Ha.'>
+                    <label for='1_1_3_3'>1.1.3.3. Sistema de Información de Ocupación del Suelo de España en Andalucía.
+                      Artificial. Nivel 2</label><br>
+                    <input type='checkbox' id='1_1_3_4' name='1_1_3_4' value='Ha.'>
+                    <label for='1_1_3_4'>1.1.3.4. Sistema de Información de Ocupación del Suelo de España en Andalucía.
+                      Forestal. Nivel 2</label><br>
+                    <input type='checkbox' id='1_1_3_5' name='1_1_3_5' value='Ha.'>
+                    <label for='1_1_3_5'>1.1.3.5. Sistema de Información de Ocupación del Suelo de España en Andalucía.
+                      Zonas húmedas. Nivel 3</label><br>
+                    <input type='checkbox' id='1_1_3_6' name='1_1_3_6' value='Ha.'>
+                    <label for='1_1_3_6'>1.1.3.6. Usos del suelo y coberturas vegetales</label><br>
+                    <input type='checkbox' id='1_1_3_7' name='1_1_3_7' value='Ha.'>
+                    <label for='1_1_3_7'>1.1.3.7. Usos del suelo y coberturas vegetales. Superficies construidas y
+                      alteradas</label><br>
+                    <input type='checkbox' id='1_1_3_8' name='1_1_3_8' value='Ha.'>
+                    <label for='1_1_3_8'>1.1.3.8. Usos del suelo y coberturas vegetales. Superficies
+                      agrícolas</label><br>
+                    <input type='checkbox' id='1_1_3_9' name='1_1_3_9' value='Ha.'>
+                    <label for='1_1_3_9'>1.1.3.9. Usos del suelo y coberturas vegetales. Superficies agrícolas.
+                      Detallado</label><br>
+                    <input type='checkbox' id='1_1_3_10' name='1_1_3_10' value='Ha.'>
+                    <label for='1_1_3_10'>1.1.3.10. Usos del suelo y coberturas vegetales. Superficies forestales y
+                      naturales</label><br>
+                    <input type='checkbox' id='1_1_3_11' name='1_1_3_11' value='Ha.'>
+                    <label for='1_1_3_11'>1.1.3.11. Usos del suelo y coberturas vegetales. Superficies forestales y
+                      naturales. Detallado</label><br>
+                    <input type='checkbox' id='1_1_3_12' name='1_1_3_12' value='Ha.'>
+                    <label for='1_1_3_12'>1.1.3.12. Usos del suelo y coberturas vegetales. Zonas húmedas y superficies
+                      de agua</label><br>
+                    <input type='checkbox' id='1_1_3_13' name='1_1_3_13' value='Km²'>
+                    <label for='1_1_3_13'>1.1.3.13. Suelos según litología</label><br>
+                    <input type='checkbox' id='1_1_3_14' name='1_1_3_14' value='Km²'>
+                    <label for='1_1_3_14'>1.1.3.14. Suelos según pendiente</label><br>
+                    <input type='checkbox' id='1_1_3_15' name='1_1_3_15' value='Porcentaje'>
+                    <label for='1_1_3_14'>1.1.3.15. Pérdidas de suelo por erosión</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='medioAmbiente'>1.2. Medio ambiente</li>
+            <div id='div_entornoFisico_medioAmbiente'>
+              <form id='form_entornoFisico_medioAmbiente' class='seleccionCategorias'>
+                <input type='checkbox' id='1_2_1' name='1_2_1' value='Espacios'>
+                <label for='1_2_1'> 1.2.1. Número de espacios naturales protegidos</label><br>
+                <input type='checkbox' id='1_2_2' name='1_2_2' value='Ha.'>
+                <label for='1_2_2'>1.2.2. Superficie de espacios naturales protegidos</label><br>
+                <input type='checkbox' id='1_2_3' name='1_2_3' value='Porcentaje'>
+                <label for='1_2_3'>1.2.3. Porcentaje de superficie del municipio ocupada por espacios naturales
+                  protegidos</label><br>
+                <input type='checkbox' id='1_2_4' name='1_2_4' value='Toneladas'>
+                <label for='1_2_4'>1.2.4. Residuos urbanos</label><br>
+              </form>
+            </div>
+          </ul>
+        </div>
+        <h3 id='title_demografia'>2. Demografía y población</h3>
+        <div id='demografia'>
+          <ul>
+            <li id='cifrasPoblacion'>2.1. Cifras de población</li>
+            <div id='demografia_cifrasPoblacion'>
+              <ul>
+                <li id='cifrasPoblacion_poblacion'>2.1.1. Estructura de la población</li>
+                <div id='demografia_cifrasPoblacion_poblacion'>
+                  <ul>
+                    <li id='cifrasPoblacion_poblacion_padron'>2.1.1.1. Padrón municipal</li>
+                    <div id='demografia_cifrasPoblacion_poblacion_padron'>
+                      <form id='form_cifrasPoblacion_poblacion_padron' class='seleccionCategorias'>
+                        <input type='checkbox' id='2_1_1_1_1' name='2_1_1_1_1' value='Habitantes'>
+                        <label for='2_1_1_1_1'> 2.1.1.1.1. Población por sexo (Padrón)</label><br>
+                        <input type='checkbox' id='2_1_1_1_2' name='2_1_1_1_2' value='Habitantes'>
+                        <label for='2_1_1_1_2'>2.1.1.1.2. Población por edad simple y sexo (Padrón)</label><br>
+                        <input type='checkbox' id='2_1_1_1_3' name='2_1_1_1_3' value='Habitantes'>
+                        <label for='2_1_1_1_3'>2.1.1.1.3. Población residente en núcleos de población y diseminados por
+                          sexo</label><br>
+                        <input type='checkbox' id='2_1_1_1_4' name='2_1_1_1_4' value='Habitantes'>
+                        <label for='2_1_1_1_4'>2.1.1.1.4. Población según la relación entre el lugar de nacimiento y la
+                          residencia por sexo (Padrón)</label><br>
+                        <input type='checkbox' id='2_1_1_1_5' name='2_1_1_1_5' value='Habitantes'>
+                        <label for='2_1_1_1_5'>2.1.1.1.5. Población extranjera por continente y sexo
+                          (Padrón)</label><br>
+                        <input type='checkbox' id='2_1_1_1_6' name='2_1_1_1_6' value='Habitantes'>
+                        <label for='2_1_1_1_6'>2.1.1.1.6. Población extranjera por continente, grupos de edad y sexo
+                          (Padrón)</label><br>
+                        <input type='checkbox' id='2_1_1_1_7' name='2_1_1_1_7' value='Habitantes'>
+                        <label for='2_1_1_1_7'>2.1.1.1.7. Población extranjera por nacionalidad y sexo: UE
+                          (Padrón)</label><br>
+                        <input type='checkbox' id='2_1_1_1_8' name='2_1_1_1_8' value='Habitantes'>
+                        <label for='2_1_1_1_8'>2.1.1.1.8. Población extranjera según principales nacionalidades y sexo
+                          (Padrón)</label><br>
+                      </form>
+                    </div>
+                    <li id='cifrasPoblacion_poblacion_censo'>2.1.1.2. Censo 2011</li>
+                    <div id='demografia_cifrasPoblacion_poblacion_censo'>
+                      <form id='form_cifrasPoblacion_poblacion_censo' class='seleccionCategorias'>
+                        <input type='checkbox' id='2_1_1_2_1' name='2_1_1_2_1' value='Número de personas'>
+                        <label for='2_1_1_2_1'> 2.1.1.2.1. Población por sexo</label><br>
+                        <input type='checkbox' id='2_1_1_2_2' name='2_1_1_2_2' value='Número de personas'>
+                        <label for='2_1_1_2_2'>2.1.1.2.2. Población por sexo y grupos de edad</label><br>
+                        <input type='checkbox' id='2_1_1_2_3' name='2_1_1_2_3' value='Número de personas'>
+                        <label for='2_1_1_2_3'>2.1.1.2.3. Población por sexo y relación entre el lugar de nacimiento y
+                          residencia</label><br>
+                        <input type='checkbox' id='2_1_1_2_4' name='2_1_1_2_4' value='Número de personas'>
+                        <label for='2_1_1_2_4'>2.1.1.2.4. Población por sexo y nacionalidad
+                          (Española/Extranjera)</label><br>
+                        <input type='checkbox' id='2_1_1_2_5' name='2_1_1_2_5' value='Número de personas'>
+                        <label for='2_1_1_2_5'>2.1.1.2.5. Población por sexo y nacionalidad (grandes grupos)</label><br>
+                        <input type='checkbox' id='2_1_1_2_6' name='2_1_1_2_6' value='Número de personas'>
+                        <label for='2_1_1_2_6'>2.1.1.2.6. Población por sexo, edad (grandes grupos) y nacionalidad
+                          (española/extranjera)</label><br>
+                      </form>
+                    </div>
+                    <li id='cifrasPoblacion_poblacion_censoA'>2.1.1.3. Censos anteriores a 2011</li>
+                    <div id='demografia_cifrasPoblacion_poblacion_censoA'>
+                      <form id='form_cifrasPoblacion_poblacion_censoA' class='seleccionCategorias'>
+                        <input type='checkbox' id='2_1_1_3_1' name='2_1_1_3_1' value='Habitantes'>
+                        <label for='2_1_1_3_1'> 2.1.1.3.1. Población por sexo (Censos 1900-2001)</label><br>
+                        <input type='checkbox' id='2_1_1_3_2' name='2_1_1_3_2' value='Habitantes'>
+                        <label for='2_1_1_3_2'>2.1.1.3.2. Población por grupos de edad y sexo (Censos 1991,
+                          2001)</label><br>
+                        <input type='checkbox' id='2_1_1_3_3' name='2_1_1_3_3' value='Habitantes'>
+                        <label for='2_1_1_3_3'>2.1.1.3.3. Población según la relación entre el lugar de nacimiento y la
+                          residencia por sexo (Censo 2001)</label><br>
+                        <input type='checkbox' id='2_1_1_3_4' name='2_1_1_3_4' value='Habitantes'>
+                        <label for='2_1_1_3_4'>2.1.1.3.4. Población extranjera por sexo (Censo 2001)</label><br>
+                        <input type='checkbox' id='2_1_1_3_5' name='2_1_1_3_5' value='Habitantes'>
+                        <label for='2_1_1_3_5'>2.1.1.3.5. Población extranjera por continente y sexo (Censos 1991,
+                          2001)</label><br>
+                        <input type='checkbox' id='2_1_1_3_6' name='2_1_1_3_6' value='Habitantes'>
+                        <label for='2_1_1_3_6'>2.1.1.3.6. Población extranjera por nacionalidad y sexo: UE15 (Censo
+                          2001)</label><br>
+                        <input type='checkbox' id='2_1_1_3_7' name='2_1_1_3_7' value='Habitantes'>
+                        <label for='2_1_1_3_7'>2.1.1.3.7. Población de 16 y más años clasificada según nivel de estudios
+                          y sexo (Censo)</label><br>
+                        <input type='checkbox' id='2_1_1_3_8' name='2_1_1_3_8' value='Porcentaje'>
+                        <label for='2_1_1_3_8'>2.1.1.3.8. Tasa de escolaridad por grupos de edad (Censos 1981,
+                          1991)</label><br>
+                        <input type='checkbox' id='2_1_1_3_9' name='2_1_1_3_9' value='Porcentaje'>
+                        <label for='2_1_1_3_9'>2.1.1.3.9. Tasa de analfabetismo por sexo (Censo 2001)</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+                <li id='cifrasPoblacion_hogar'>2.1.2. Estructura del hogar</li>
+                <div id='demografia_cifrasPoblacion_hogar'>
+                  <form id='form_cifrasPoblacion_hogar' class='seleccionCategorias'>
+                    <input type='checkbox' id='2_1_2_1' name='2_1_2_1' value='Hogares'>
+                    <label for='2_1_2_1'> 2.1.2.1. Hogares según su tamaño. Censo 2011</label><br>
+                    <input type='checkbox' id='2_1_2_2' name='2_1_2_2' value='Núcleos'>
+                    <label for='2_1_2_2'>2.1.2.2. Núcleos familiares según tipo. Censo 2011</label><br>
+                    <input type='checkbox' id='2_1_2_3' name='2_1_2_3' value='Número,Porcentaje'>
+                    <label for='2_1_2_3'>2.1.2.3. Principales indicadores. Censo 2011</label><br>
+                    <input type='checkbox' id='2_1_2_4' name='2_1_2_4' value='Hogares'>
+                    <label for='2_1_2_4'>2.1.2.4. Número de hogares según su estructura. Censo 2001</label><br>
+                    <input type='checkbox' id='2_1_2_5' name='2_1_2_5' value='Hogares'>
+                    <label for='2_1_2_5'>2.1.2.5. Número de hogares unipersonales según su estructura. Censo
+                      2001</label><br>
+                    <input type='checkbox' id='2_1_2_6' name='2_1_2_6' value='Hogares'>
+                    <label for='2_1_2_6'>2.1.2.6. Número de hogares con un adulto y algún menor según su estructura.
+                      Censo 2001</label><br>
+                    <input type='checkbox' id='2_1_2_7' name='2_1_2_7' value='Hogares'>
+                    <label for='2_1_2_7'>2.1.2.7. Número de hogares con dos adultos según su estructura. Censo
+                      2001</label><br>
+                    <input type='checkbox' id='2_1_2_8' name='2_1_2_8' value='Hogares'>
+                    <label for='2_1_2_8'>2.1.2.8. Número de hogares con tres adultos según su estructura. Censo
+                      2001</label><br>
+                    <input type='checkbox' id='2_1_2_9' name='2_1_2_9' value='Hogares'>
+                    <label for='2_1_2_9'>2.1.2.9. Número de hogares con cuatro o más adultos según su estructura. Censo
+                      2001</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='movimientoPoblacion'>2.2. Movimiento natural de la población</li>
+            <div id='demografia_movimientoPoblacion'>
+              <form id='form_movimientoPoblacion' class='seleccionCategorias'>
+                <input type='checkbox' id='2_2_1' name='2_2_1' value='Número'>
+                <label for='2_2_1'> 2.2.1. Nacimientos, defunciones y crecimiento vegetativo por sexo</label><br>
+                <input type='checkbox' id='2_2_2' name='2_2_2' value='Nacimientos'>
+                <label for='2_2_2'>2.2.2. Nacimientos por sexo del recién nacido y residencia materna</label><br>
+                <input type='checkbox' id='2_2_3' name='2_2_3' value='Nacimientos'>
+                <label for='2_2_3'>2.2.3. Nacimientos por edad de la madre y residencia materna</label><br>
+                <input type='checkbox' id='2_2_4' name='2_2_4' value='Matrimonios'>
+                <label for='2_2_4'>2.2.4. Matrimonios según lugar donde fijan su residencia</label><br>
+                <input type='checkbox' id='2_2_5' name='2_2_5' value='Matrimonios'>
+                <label for='2_2_5'>2.2.5. Matrimonios según lugar donde fijan su residencia y mes de
+                  celebración</label><br>
+                <input type='checkbox' id='2_2_6' name='2_2_6' value='Defunciones'>
+                <label for='2_2_6'>2.2.6. Defunciones por lugar de residencia y sexo</label><br>
+                <input type='checkbox' id='2_2_7' name='2_2_7' value='Defunciones'>
+                <label for='2_2_7'>2.2.7. Defunciones por grupos de edad y sexo</label><br>
+                <input type='checkbox' id='2_2_8' name='2_2_8' value='Defunciones'>
+                <label for='2_2_8'>2.2.8. Defunciones por estado civil y sexo</label><br>
+              </form>
+            </div>
+            <li id='migraciones'>2.3. Migraciones</li>
+            <div id='demografia_migraciones'>
+              <form id='form_migraciones' class='seleccionCategorias'>
+                <input type='checkbox' id='2_3_1' name='2_3_1' value='Número de variaciones'>
+                <label for='2_3_1'> 2.3.1. Emigraciones por sexo</label><br>
+                <input type='checkbox' id='2_3_2' name='2_3_2' value='Número de variaciones'>
+                <label for='2_3_2'>2.3.2. Emigraciones por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_3' name='2_3_3' value='Número de variaciones'>
+                <label for='2_3_3'>2.3.3. Emigraciones interiores por sexo</label><br>
+                <input type='checkbox' id='2_3_4' name='2_3_4' value='Número de variaciones'>
+                <label for='2_3_4'>2.3.4. Emigraciones interiores por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_5' name='2_3_5' value='Número de variaciones'>
+                <label for='2_3_5'>2.3.5. Emigraciones exteriores por sexo</label><br>
+                <input type='checkbox' id='2_3_6' name='2_3_6' value='Número de variaciones'>
+                <label for='2_3_6'>2.3.6. Emigraciones exteriores por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_7' name='2_3_7' value='Número de variaciones'>
+                <label for='2_3_7'>2.3.7. Emigraciones al extranjero por sexo</label><br>
+                <input type='checkbox' id='2_3_8' name='2_3_8' value='Número de variaciones'>
+                <label for='2_3_8'>2.3.8. Emigraciones al extranjero por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_9' name='2_3_9' value='Número de variaciones'>
+                <label for='2_3_9'>2.3.9. Emigraciones al extranjero por sexo y nacionalidad</label><br>
+                <input type='checkbox' id='2_3_10' name='2_3_10' value='Número de variaciones'>
+                <label for='2_3_10'>2.3.10. Inmigraciones por sexo</label><br>
+                <input type='checkbox' id='2_3_11' name='2_3_11' value='Número de variaciones'>
+                <label for='2_3_11'>2.3.11. Inmigraciones por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_12' name='2_3_12' value='Número de variaciones'>
+                <label for='2_3_12'>2.3.12. Inmigraciones interiores por sexo</label><br>
+                <input type='checkbox' id='2_3_13' name='2_3_13' value='Número de variaciones'>
+                <label for='2_3_13'>2.3.13. Inmigraciones interiores por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_14' name='2_3_14' value='Número de variaciones'>
+                <label for='2_3_14'>2.3.14. Inmigraciones exteriores por sexo</label><br>
+                <input type='checkbox' id='2_3_15' name='2_3_15' value='Número de variaciones'>
+                <label for='2_3_15'>2.3.15. Inmigraciones exteriores por sexo y grupos de edad</label><br>
+                <input type='checkbox' id='2_3_16' name='2_3_16' value='Número de variaciones'>
+                <label for='2_3_16'>2.3.16. Inmigraciones procedentes del extranjero por sexo</label><br>
+                <input type='checkbox' id='2_3_17' name='2_3_17' value='Número de variaciones'>
+                <label for='2_3_17'>2.3.17. Inmigraciones procedentes del extranjero por sexo y grupos de
+                  edad</label><br>
+                <input type='checkbox' id='2_3_18' name='2_3_18' value='Número de variaciones'>
+                <label for='2_3_18'>2.3.18. Inmigraciones procedentes del extranjero por sexo y nacionalidad</label><br>
+              </form>
+            </div>
+            <li id='indicadoresDemograficos'>2.4. Indicadores demográficos</li>
+            <div id='demografia_indicadoresDemograficos'>
+              <form id='form_indicadoresDemograficos' class='seleccionCategorias'>
+                <input type='checkbox' id='2_4_1' name='2_4_1' value='Años'>
+                <label for='2_4_1'> 2.4.1. Edad media de la población por sexo (Padrón)</label><br>
+                <input type='checkbox' id='2_4_2' name='2_4_2' value='Años'>
+                <label for='2_4_2'>2.4.2. Edad media de la población por nacionalidad (Padrón)</label><br>
+                <input type='checkbox' id='2_4_3' name='2_4_3' value='Porcentaje'>
+                <label for='2_4_3'>2.4.3. Índice de dependencia</label><br>
+                <input type='checkbox' id='2_4_4' name='2_4_4' value='Mayores de 64 / Menores de 16'>
+                <label for='2_4_4'>2.4.4. Índice de envejecimiento</label><br>
+              </form>
+            </div>
+          </ul>
+        </div>
+        <!--                   /////////////////////                                                     -->
+        <h3 id='title_sociedad'>3. Sociedad</h3>
+        <div id='sociedad'>
+          <ul>
+            <li id='enseñanza'>3.1. Enseñanza y formación</li>
+            <div id='sociedad_enseñanza'>
+              <ul>
+                <li id='sociedad_enseñanza_centrosEducativos'>3.1.1. Centros educativos</li>
+                <div id='div_sociedad_enseñanza_centrosEducativos'>
+                  <ul>
+                    <li id='sociedad_enseñanza_centrosEducativos_centrosPublicos'>3.1.1.1. Centros públicos</li>
+                    <div id='div_sociedad_enseñanza_centrosEducativos_centrosPublicos'>
+                      <form id='form_sociedad_enseñanza_centrosEducativos_centrosPublicos' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_1_1_1_1' name='3_1_1_1_1' value='Centros'>
+                        <label for='3_1_1_1_1'> 3.1.1.1.1. Centros públicos por nivel educativo</label><br>
+                        <input type='checkbox' id='3_1_1_1_2' name='3_1_1_1_2' value='Centros'>
+                        <label for='3_1_1_1_2'>3.1.1.1.2. Centros públicos de adultos</label><br>
+                      </form>
+                    </div>
+                    <li id='sociedad_enseñanza_centrosEducativos_centrosPrivados'>3.1.1.2. Centros privados</li>
+                    <div id='div_sociedad_enseñanza_centrosEducativos_centrosPrivados'>
+                      <form id='form_sociedad_enseñanza_centrosEducativos_centrosPrivados' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_1_1_2_1' name='3_1_1_2_1' value='Centros'>
+                        <label for='3_1_1_2_1'> 3.1.1.2.1. Centros privados concertados por nivel educativo</label><br>
+                        <input type='checkbox' id='3_1_1_2_2' name='3_1_1_2_2' value='Centros'>
+                        <label for='3_1_1_2_2'>3.1.1.2.2. Centros privados no concertados por nivel
+                          educativo</label><br>
+                        <input type='checkbox' id='3_1_1_2_3' name='3_1_1_2_3' value='Centros'>
+                        <label for='3_1_1_2_3'>3.1.1.2.3. Centros extranjeros por nivel educativo</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+                <li id='sociedad_enseñanza_alumnado'>3.1.2. Alumnado</li>
+                <div id='div_sociedad_enseñanza_alumnado'>
+                  <ul>
+                    <li id='sociedad_enseñanza_alumnado_centrosPublicos'>3.1.2.1. Alumnos en centros públicos</li>
+                    <div id='div_sociedad_enseñanza_alumnado_centrosPublicos'>
+                      <form id='form_sociedad_enseñanza_alumnado_centrosPublicos' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_1_2_1_1' name='3_1_2_1_1' value='Alumnos'>
+                        <label for='3_1_2_1_1'> 3.1.2.1.1. Alumnos en centros públicos por nivel educativo y
+                          sexo</label><br>
+                        <input type='checkbox' id='3_1_2_1_2' name='3_1_2_1_2' value='Alumnos'>
+                        <label for='3_1_2_1_2'>3.1.2.1.2. Alumnos en centros públicos de adultos por sexo</label><br>
+                      </form>
+                    </div>
+                    <li id='sociedad_enseñanza_alumnado_centrosPrivados'>3.1.2.2. Alumnos en centros privados</li>
+                    <div id='div_sociedad_enseñanza_alumnado_centrosPrivados'>
+                      <form id='form_sociedad_enseñanza_alumnado_centrosPrivados' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_1_2_2_1' name='3_1_2_2_1' value='Alumnos'>
+                        <label for='3_1_2_2_1'> 3.1.2.2.1. Alumnos en centros privados concertados por nivel educativo y
+                          sexo</label><br>
+                        <input type='checkbox' id='3_1_2_2_2' name='3_1_2_2_2' value='Alumnos'>
+                        <label for='3_1_2_2_2'>3.1.2.2.2. Alumnos en centros privados no concertados por nivel educativo
+                          y sexo</label><br>
+                        <input type='checkbox' id='3_1_2_2_3' name='3_1_2_2_3' value='Alumnos'>
+                        <label for='3_1_2_2_3'>3.1.2.2.3. Alumnos en centros extranjeros por nivel educativo y
+                          sexo</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+                <li id='sociedad_enseñanza_profesorado'>3.1.3. Profesorado</li>
+                <div id='div_sociedad_enseñanza_profesorado'>
+                  <ul>
+                    <li id='sociedad_enseñanza_profesorado_centrosPublicos'>3.1.3.1. Profesores en centros públicos</li>
+                    <div id='div_sociedad_enseñanza_profesorado_centrosPublicos'>
+                      <form id='form_sociedad_enseñanza_profesorado_centrosPublicos' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_1_3_1_1' name='3_1_3_1_1' value='Profesores'>
+                        <label for='3_1_3_1_1'> 3.1.3.1.1. Profesores en centros públicos por nivel educativo y
+                          sexo</label><br>
+                        <input type='checkbox' id='3_1_3_1_2' name='3_1_3_1_2' value='Profesores'>
+                        <label for='3_1_3_1_2'>3.1.3.1.2. Profesores en centros públicos de adultos por sexo</label><br>
+                      </form>
+                    </div>
+                    <li id='sociedad_enseñanza_profesorado_centrosPrivados'>3.1.3.2. Profesores en centros privados</li>
+                    <div id='div_sociedad_enseñanza_profesorado_centrosPrivados'>
+                      <form id='form_sociedad_enseñanza_profesorado_centrosPrivados' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_1_3_2_1' name='3_1_3_2_1' value='Profesores'>
+                        <label for='3_1_3_2_1'> 3.1.3.2.1. Profesores en centros privados por nivel educativo y
+                          sexo</label><br>
+                        <input type='checkbox' id='3_1_3_2_2' name='3_1_3_2_2' value='Profesores'>
+                        <label for='3_1_3_2_2'>3.1.3.2.2. Profesores en centros privados no concertados por nivel
+                          educativo y sexo</label><br>
+                        <input type='checkbox' id='3_1_3_2_3' name='3_1_3_2_3' value='Profesores'>
+                        <label for='3_1_3_2_3'>3.1.3.2.3. Profesores en centros extranjeros por nivel educativo y
+                          sexo</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+                <li id='sociedad_enseñanza_unidadesGrupos'>3.1.4. Unidades/Grupos</li>
+                <div id='div_sociedad_enseñanza_unidadesGrupos'>
+                  <form id='form_sociedad_enseñanza_unidadesGrupos' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_1_4_1' name='3_1_4_1' value='Unidades'>
+                    <label for='3_1_4_1'> 3.1.4.1. Unidades en centros públicos por nivel educativo</label><br>
+                    <input type='checkbox' id='3_1_4_2' name='3_1_4_2' value='Unidades'>
+                    <label for='3_1_4_2'>3.1.4.2. Unidades en centros privados concertados por nivel
+                      educativo</label><br>
+                    <input type='checkbox' id='3_1_4_3' name='3_1_4_3' value='Unidades'>
+                    <label for='3_1_4_3'>3.1.4.3. Unidades en centros privados no concertados por nivel
+                      educativo</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='sanitariosSalud'>3.2. Recursos sanitarios y salud de la población</li>
+            <div id='sociedad_sanitariosSalud'>
+              <ul>
+                <li id='sociedad_sanitariosSalud_recursos'>3.2.1. Recursos sanitarios</li>
+                <div id='div_sociedad_sanitariosSalud_recursos'>
+                  <form id='form_sociedad_sanitariosSalud_recursos' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_2_1_1' name='3_2_1_1' value='Centros'>
+                    <label for='3_2_1_1'> 3.2.1.1. Recursos de atención primaria</label><br>
+                    <input type='checkbox' id='3_2_1_2' name='3_2_1_2' value='Centros'>
+                    <label for='3_2_1_2'>3.2.1.2. Recursos de atención especializada: Centros</label><br>
+                    <input type='checkbox' id='3_2_1_3' name='3_2_1_3' value='Camas'>
+                    <label for='3_2_1_3'>3.2.1.3. Recursos de atención especializada: Camas</label><br>
+                    <input type='checkbox' id='3_2_1_4' name='3_2_1_4' value='Farmacias, Hab./Farmacia'>
+                    <label for='3_2_1_4'>3.2.1.4. Farmacias y número de habitantes por farmacia</label><br>
+                  </form>
+                </div>
+                <li id='sociedad_sanitariosSalud_estado'>3.2.2. Estado de salud de la población</li>
+                <div id='div_sociedad_sanitariosSalud_estado'>
+                  <form id='form_sociedad_sanitariosSalud_estado' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_2_2_1' name='3_2_2_1' value='Número de defunciones'>
+                    <label for='3_2_2_1'> 3.2.2.1. Defunciones por causa de muerte (10ª revisión de la CIE)</label><br>
+                    <input type='checkbox' id='3_2_2_2' name='3_2_2_2' value='Número de defunciones'>
+                    <label for='3_2_2_2'>3.2.2.2. Defunciones por causa de muerte y sexo (9ª revisión de la CIE).
+                      (1980-1998)</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='edificiosViviendas'>3.3. Edificios y viviendas</li>
+            <div id='sociedad_edificiosViviendas'>
+              <ul>
+                <li id='sociedad_edificiosViviendas_edificios'>3.3.1. Edificios</li>
+                <div id='div_sociedad_edificiosViviendas_edificios'>
+                  <form id='form_sociedad_edificiosViviendas_edificios' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_3_1_1' name='3_3_1_1' value='Número de edificios'>
+                    <label for='3_3_1_1'> 3.3.1.1. Edificios e inmuebles. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_2' name='3_3_1_2' value='Número de edificios'>
+                    <label for='3_3_1_2'>3.3.1.2. Edificios por número de inmuebles. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_3' name='3_3_1_3' value='Número de edificios'>
+                    <label for='3_3_1_3'>3.3.1.3. Edificios por número de plantas sobre rasante. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_4' name='3_3_1_4' value='Número de edificios'>
+                    <label for='3_3_1_4'>3.3.1.4. Edificios por número de plantas bajo rasante. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_5' name='3_3_1_5' value='Número de edificios'>
+                    <label for='3_3_1_5'>3.3.1.5. Edificios destinados a viviendas por año de construcción del edificio.
+                      Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_6' name='3_3_1_6' value='Número de edificios'>
+                    <label for='3_3_1_6'>3.3.1.6. Edificios destinados a viviendas por estado del edificio. Censo
+                      2011</label><br>
+                    <input type='checkbox' id='3_3_1_7' name='3_3_1_7' value='Número de inmuebles'>
+                    <label for='3_3_1_7'>3.3.1.7. Número de inmuebles en edificios destinados a viviendas por número de
+                      plantas sobre rasante. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_8' name='3_3_1_8' value='Número de inmuebles'>
+                    <label for='3_3_1_8'>3.3.1.8. Número de inmuebles en edificios destinados a viviendas por año de
+                      construcción. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_9' name='3_3_1_9' value='Número de inmuebles'>
+                    <label for='3_3_1_9'>3.3.1.9. Número de inmuebles en edificios destinados a viviendas por
+                      accesibilidad al edificio. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_1_10' name='3_3_1_10' value='Número de edificios'>
+                    <label for='3_3_1_10'>3.3.1.10. Número de edificios según tipo de edificio. Censo 2001</label><br>
+                    <input type='checkbox' id='3_3_1_11' name='3_3_1_11' value='Número de edificios'>
+                    <label for='3_3_1_11'>3.3.1.11. Edificios destinados a viviendas según instalaciones. Censo
+                      2001</label><br>
+                    <input type='checkbox' id='3_3_1_12' name='3_3_1_12' value='Número de edificios'>
+                    <label for='3_3_1_12'>3.3.1.12. Edificios por destino. Censo de edificios (1980,1990)</label><br>
+                    <input type='checkbox' id='3_3_1_13' name='3_3_1_13' value='Número de edificios'>
+                    <label for='3_3_1_13'>3.3.1.13. Edificios por instalaciones y servicios. Censo de edificios (1980,
+                      1990)</label><br>
+                  </form>
+                </div>
+                <li id='sociedad_edificiosViviendas_viviendas'>3.3.2. Viviendas</li>
+                <div id='div_sociedad_edificiosViviendas_viviendas'>
+                  <form id='form_sociedad_edificiosViviendas_viviendas' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_3_2_1' name='3_3_2_1' value='Viviendas'>
+                    <label for='3_3_2_1'> 3.3.2.1. Viviendas familiares principales y no principales. Censo
+                      2011</label><br>
+                    <input type='checkbox' id='3_3_2_2' name='3_3_2_2' value='Viviendas'>
+                    <label for='3_3_2_2'>3.3.2.2. Viviendas familiares clasificadas por tipo. Municipios mayores de 2000
+                      habitantes. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_2_3' name='3_3_2_3' value='Viviendas'>
+                    <label for='3_3_2_3'>3.3.2.3. Viviendas clasificadas por tipo. Censo 2001</label><br>
+                    <input type='checkbox' id='3_3_2_4' name='3_3_2_4' value='Viviendas'>
+                    <label for='3_3_2_4'>3.3.2.4. Viviendas según su régimen de tenencia. Censo 2001</label><br>
+                    <input type='checkbox' id='3_3_2_5' name='3_3_2_5' value='Viviendas'>
+                    <label for='3_3_2_5'>3.3.2.5. Viviendas según número de habitaciones. Censo 2001</label><br>
+                    <input type='checkbox' id='3_3_2_6' name='3_3_2_6' value='Viviendas'>
+                    <label for='3_3_2_6'>3.3.2.6. Viviendas según superficie de la vivienda. Censo 2001</label><br>
+                    <input type='checkbox' id='3_3_2_7' name='3_3_2_7' value='Viviendas'>
+                    <label for='3_3_2_7'>3.3.2.7. Viviendas clasificadas por tipo. Censos 1981,1991</label><br>
+                  </form>
+                </div>
+                <li id='sociedad_edificiosViviendas_establecimientos'>3.3.3. Establecimientos colectivos</li>
+                <div id='div_sociedad_edificiosViviendas_establecimientos'>
+                  <form id='form_sociedad_edificiosViviendas_establecimientos' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_3_3_1' name='3_3_3_1' value='Número de establecimientos'>
+                    <label for='3_3_3_1'> 3.3.3.1. Establecimientos colectivos por tipo. Censo 2011</label><br>
+                    <input type='checkbox' id='3_3_3_2' name='3_3_3_2' value='Número de personas'>
+                    <label for='3_3_3_2'>3.3.3.2. Población en establecimientos colectivos por tipo de establecimiento.
+                      Municipios con más de 10.000 habitantes</label><br>
+                    <input type='checkbox' id='3_3_3_3' name='3_3_3_3' value='Número de personas'>
+                    <label for='3_3_3_3'>3.3.3.3. Población en establecimientos colectivos por situación de
+                      empadronamiento. Municipios con más de 10.000 habitantes</label><br>
+                    <input type='checkbox' id='3_3_3_4' name='3_3_3_4' value='Número, Porcentaje'>
+                    <label for='3_3_3_4'>3.3.3.4. Principales indicadores referentes a establecimientos colectivos.
+                      Censo 2011</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='elecciones'>3.4. Elecciones</li>
+            <div id='sociedad_elecciones'>
+              <ul>
+                <li id='sociedad_elecciones_generales'>3.4.1. Elecciones Generales</li>
+                <div id='div_sociedad_elecciones_generales'>
+                  <form id='form_sociedad_elecciones_generales' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_4_1_1' name='3_4_1_1' value='Número de personas'>
+                    <label for='3_4_1_1'> 3.4.1.1. Elecciones Generales: Censo electoral</label><br>
+                    <input type='checkbox' id='3_4_1_2' name='3_4_1_2' value='Número de personas'>
+                    <label for='3_4_1_2'>3.4.1.2. Elecciones Generales: Número de votantes</label><br>
+                    <input type='checkbox' id='3_4_1_3' name='3_4_1_3' value='Número de personas'>
+                    <label for='3_4_1_3'>3.4.1.3. Elecciones Generales: Votos y abstenciones</label><br>
+                    <input type='checkbox' id='3_4_1_4' name='3_4_1_4' value='Número de personas'>
+                    <label for='3_4_1_4'>3.4.1.4. Elecciones Generales: Votos a candidaturas</label><br>
+                  </form>
+                </div>
+                <li id='sociedad_elecciones_andalucia'>3.4.2. Elecciones al Parlamento de Andalucía</li>
+                <div id='div_sociedad_elecciones_andalucia'>
+                  <form id='form_sociedad_elecciones_andalucia' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_4_2_1' name='3_4_2_1' value='Número de personas'>
+                    <label for='3_4_2_1'> 3.4.2.1. Elecciones al Parlamento de Andalucía: Censo electoral</label><br>
+                    <input type='checkbox' id='3_4_2_2' name='3_4_2_2' value='Número de personas'>
+                    <label for='3_4_2_2'>3.4.2.2. Elecciones al Parlamento de Andalucía: Número de votantes</label><br>
+                    <input type='checkbox' id='3_4_2_3' name='3_4_2_3' value='Número de personas'>
+                    <label for='3_4_2_3'>3.4.2.3. Elecciones al Parlamento de Andalucía: Votos y
+                      abstenciones</label><br>
+                    <input type='checkbox' id='3_4_2_4' name='3_4_2_4' value='Número de personas'>
+                    <label for='3_4_2_4'>3.4.2.4. Elecciones al Parlamento de Andalucía: Votos a
+                      candidaturas</label><br>
+                  </form>
+                </div>
+                <li id='sociedad_elecciones_locales'>3.4.3. Elecciones Locales en Andalucía</li>
+                <div id='div_sociedad_elecciones_locales'>
+                  <form id='form_sociedad_elecciones_locales' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_4_3_1' name='3_4_3_1' value='Número de personas'>
+                    <label for='3_4_3_1'> 3.4.3.1. Elecciones Locales en Andalucía: Censo electoral</label><br>
+                    <input type='checkbox' id='3_4_3_2' name='3_4_3_2' value='Número de personas'>
+                    <label for='3_4_3_2'>3.4.3.2. Elecciones Locales en Andalucía: Número de votantes</label><br>
+                    <input type='checkbox' id='3_4_3_3' name='3_4_3_3' value='Número de personas'>
+                    <label for='3_4_3_3'>3.4.3.3. Elecciones Locales en Andalucía: Votos y abstenciones</label><br>
+                    <input type='checkbox' id='3_4_3_4' name='3_4_3_4' value='Número de personas'>
+                    <label for='3_4_3_4'>3.4.3.4. Elecciones Locales en Andalucía: Votos a candidaturas</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='culturaTiempoLibre'>3.5. Cultura y tiempo libre</li>
+            <div id='sociedad_culturaTiempoLibre'>
+              <ul>
+                <li id='sociedad_culturaTiempoLibre_equipamiento'>3.5.1. Equipamiento</li>
+                <div id='div_sociedad_culturaTiempoLibre_equipamiento'>
+                  <ul>
+                    <li id='sociedad_culturaTiempoLibre_equipamiento_cine'>3.5.1.1. Cinematografía</li>
+                    <div id='div_sociedad_culturaTiempoLibre_equipamiento_cine'>
+                      <form id='form_sociedad_culturaTiempoLibre_equipamiento_cine' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_5_1_1_1' name='3_5_1_1_1' value='Cines, Pantallas, Butacas'>
+                        <label for='3_5_1_1_1'> 3.5.1.1.1. Cines, pantallas y aforo en salas de cine</label><br>
+                      </form>
+                    </div>
+                    <li id='sociedad_culturaTiempoLibre_equipamiento_bibliotecas'>3.5.1.2. Bibliotecas</li>
+                    <div id='div_sociedad_culturaTiempoLibre_equipamiento_bibliotecas'>
+                      <form id='form_sociedad_culturaTiempoLibre_equipamiento_bibliotecas' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_5_1_2_1' name='3_5_1_2_1' value='Número de bibliotecas'>
+                        <label for='3_5_1_2_1'> 3.5.1.2.1. Número de bibliotecas públicas</label><br>
+                        <input type='checkbox' id='3_5_1_2_2' name='3_5_1_2_2' value='Número de personas'>
+                        <label for='3_5_1_2_2'> 3.5.1.2.2. Visitantes a las bibliotecas públicas</label><br>
+                        <input type='checkbox' id='3_5_1_2_3' name='3_5_1_2_3' value='Número de personas'>
+                        <label for='3_5_1_2_3'> 3.5.1.2.3. Personas usuarias inscritas en las bibliotecas públicas por
+                          sexo y grupos de edad</label><br>
+                        <input type='checkbox' id='3_5_1_2_4' name='3_5_1_2_4' value='Número de documentos'>
+                        <label for='3_5_1_2_4'> 3.5.1.2.4. Fondos de las bibliotecas públicas de Andalucía por
+                          tipo</label><br>
+                        <input type='checkbox' id='3_5_1_2_5' name='3_5_1_2_5' value='Número de documentos'>
+                        <label for='3_5_1_2_5'> 3.5.1.2.5. Número de préstamos en las bibliotecas públicas por tipo de
+                          préstamo</label><br>
+                        <input type='checkbox' id='3_5_1_2_6' name='3_5_1_2_6' value='Número de actividades'>
+                        <label for='3_5_1_2_6'> 3.5.1.2.6. Actividades culturales organizadas en la biblioteca por tipo
+                          de actividad</label><br>
+                        <input type='checkbox' id='3_5_1_2_7' name='3_5_1_2_7' value='Euros'>
+                        <label for='3_5_1_2_7'> 3.5.1.2.7. Gasto de las bibliotecas públicas por procedencia y
+                          tipo</label><br>
+                        <input type='checkbox' id='3_5_1_2_8' name='3_5_1_2_8' value='Número de personas'>
+                        <label for='3_5_1_2_8'> 3.5.1.2.8. Personal de las bibliotecas de Andalucía según
+                          puesto</label><br>
+                      </form>
+                    </div>
+                    <li id='sociedad_culturaTiempoLibre_equipamiento_deporte'>3.5.1.3. Actividades deportivas</li>
+                    <div id='div_sociedad_culturaTiempoLibre_equipamiento_deporte'>
+                      <form id='form_sociedad_culturaTiempoLibre_equipamiento_deporte' class='seleccionCategorias'>
+                        <input type='checkbox' id='3_5_1_3_1' name='3_5_1_3_1' value='Instalaciones deportivas'>
+                        <label for='3_5_1_3_1'> 3.5.1.3.1. Instalaciones deportivas por tipo (CNID-2005)</label><br>
+                        <input type='checkbox' id='3_5_1_3_2' name='3_5_1_3_2' value='Espacios deportivos'>
+                        <label for='3_5_1_3_2'> 3.5.1.3.2. Instalaciones deportivas. Espacios deportivos por tipo
+                          (CNID-2005)</label><br>
+                        <input type='checkbox' id='3_5_1_3_3' name='3_5_1_3_3' value='Espacios complementarios'>
+                        <label for='3_5_1_3_3'> 3.5.1.3.3. Instalaciones deportivas. Nº de espacios complementarios
+                          (CNID-2005)</label><br>
+                        <input type='checkbox' id='3_5_1_3_4' name='3_5_1_3_4' value='Espacios deportivos'>
+                        <label for='3_5_1_3_4'> 3.5.1.3.4. Espacios deportivos convencionales por tipo.
+                          (1997)</label><br>
+                        <input type='checkbox' id='3_5_1_3_5' name='3_5_1_3_5' value='Espacios deportivos'>
+                        <label for='3_5_1_3_5'> 3.5.1.3.5. Espacios deportivos no convencionales por tipo.
+                          (1997)</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+                <li id='sociedad_culturaTiempoLibre_patrimonioHistorico'>3.5.2. Patrimonio histórico</li>
+                <div id='div_sociedad_culturaTiempoLibre_patrimonioHistorico'>
+                  <form id='form_sociedad_culturaTiempoLibre_patrimonioHistorico' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_5_2_1' name='3_5_2_1' value='Número de bienes'>
+                    <label for='3_5_2_1'> 3.5.2.1. Bienes inmuebles, muebles e inmateriales</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='serviciosProteccionSocial'>3.6. Servicios sociales y protección social</li>
+            <div id='sociedad_serviciosProteccionSocial'>
+              <ul>
+                <li id='sociedad_serviciosProteccionSocial_mapa'>3.6.1. Mapa de Servicios Sociales</li>
+                <div id='div_sociedad_serviciosProteccionSocial_mapa'>
+                  <form id='form_sociedad_serviciosProteccionSocial_mapa' class='seleccionCategorias'>
+                    <input type='checkbox' id='3_6_1_1' name='3_6_1_1' value='Centros'>
+                    <label for='3_6_1_1'> 3.6.1.1. Centros de servicios sociales por sector y tipo de centro</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='infraestructurasEquipamientos'>3.7. Infraestructuras y equipamientos locales</li>
+            <div id='sociedad_infraestructurasEquipamientos'>
+              <form id='form_sociedad_infraestructurasEquipamientos' class='seleccionCategorias'>
+                <input type='checkbox' id='3_7_1' name='3_7_1' value='m³/día'>
+                <label for='3_7_1'> 3.7.1. Consumo medio diario de agua</label><br>
+                <input type='checkbox' id='3_7_2' name='3_7_2' value='m³'>
+                <label for='3_7_2'> 3.7.2. Capacidad de los depósitos de agua</label><br>
+                <input type='checkbox' id='3_7_3' name='3_7_3' value='metros'>
+                <label for='3_7_3'> 3.7.3. Infraestructura viaria por tipo y estado de la vía</label><br>
+                <input type='checkbox' id='3_7_4' name='3_7_4' value='Km.'>
+                <label for='3_7_4'> 3.7.4. Red viaria según titularidad</label><br>
+                <input type='checkbox' id='3_7_5' name='3_7_5' value='Instalaciones deportivas'>
+                <label for='3_7_5'> 3.7.5. Instalaciones deportivas por tipo</label><br>
+                <input type='checkbox' id='3_7_6' name='3_7_6' value='Plazas'>
+                <label for='3_7_6'> 3.7.6. Centros asistenciales</label><br>
+                <input type='checkbox' id='3_7_7' name='3_7_7' value='Contenedores, TM/año'>
+                <label for='3_7_7'> 3.7.7. Residuos urbanos:Contenedores y producción</label><br>
+                <input type='checkbox' id='3_7_8' name='3_7_8' value='Puntos de luz, Kw'>
+                <label for='3_7_8'> 3.7.8. Alumbrado público:Número de puntos de luz y potencia instalada</label><br>
+              </form>
+            </div>
+          </ul>
+        </div>
+
+        <!--                   /////////////////////                                                     -->
+        <h3 id='title_economia'>4. Economía</h3>
+        <div id='economia'>
+          <ul>
+            <li id='agricultura'>4.1. Agricultura</li>
+            <div id='economia_agricultura'>
+              <ul>
+                <li id='economia_agricultura_distribucion'>4.1.1. Distribución general de la tierra</li>
+                <div id='div_economia_agricultura_distribucion'>
+                  <form id='form_economia_agricultura_distribucion' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_1_1_1' name='4_1_1_1' value='Ha.'>
+                    <label for='4_1_1_1'> 4.1.1.1. Superficie destinada a cultivos herbáceos de secano</label><br>
+                    <input type='checkbox' id='4_1_1_2' name='4_1_1_2' value='Ha.'>
+                    <label for='4_1_1_2'> 4.1.1.2. Superficie destinada a cultivos herbáceos de regadío</label><br>
+                    <input type='checkbox' id='4_1_1_3' name='4_1_1_3' value='Ha.'>
+                    <label for='4_1_1_3'> 4.1.1.3. Superficie destinada a cultivos leñosos de regadío</label><br>
+                    <input type='checkbox' id='4_1_1_4' name='4_1_1_4' value='Ha.'>
+                    <label for='4_1_1_4'> 4.1.1.4. Superficie destinada a cultivos leñosos de secano</label><br>
+                    <input type='checkbox' id='4_1_1_5' name='4_1_1_5' value='Ha.'>
+                    <label for='4_1_1_5'> 4.1.1.5. Distribución general de la tierra por aprovechamiento</label><br>
+                    <input type='checkbox' id='4_1_1_6' name='4_1_1_6' value='Ha.'>
+                    <label for='4_1_1_6'> 4.1.1.6. Superficie de las explotaciones agrarias por
+                      aprovechamiento</label><br>
+                  </form>
+                </div>
+                <li id='economia_agricultura_censo'>4.1.2. Censo Agrario 2009</li>
+                <div id='div_economia_agricultura_censo'>
+                  <form id='form_economia_agricultura_censo' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_1_2_1' name='4_1_2_1' value='Explotaciones, Ha.'>
+                    <label for='4_1_2_1'> 4.1.2.1. Número y superficie del total de explotaciones y de las explotaciones
+                      con superficie agraria utilizada (SAU)</label><br>
+                    <input type='checkbox' id='4_1_2_2' name='4_1_2_2' value='Explotaciones'>
+                    <label for='4_1_2_2'> 4.1.2.2. Explotaciones con superficie agraria utilizada (SAU) por tamaño de la
+                      SAU</label><br>
+                    <input type='checkbox' id='4_1_2_3' name='4_1_2_3' value='Explotaciones'>
+                    <label for='4_1_2_3'> 4.1.2.3. Número de explotaciones según forma jurídica del titular</label><br>
+                    <input type='checkbox' id='4_1_2_4' name='4_1_2_4' value='Explotaciones, Ha.'>
+                    <label for='4_1_2_4'> 4.1.2.4. Distribución general de la superficie</label><br>
+                    <input type='checkbox' id='4_1_2_5' name='4_1_2_5' value='Explotaciones, Ha.'>
+                    <label for='4_1_2_5'> 4.1.2.5. Número y SAU de las explotaciones según régimen tenencia</label><br>
+                    <input type='checkbox' id='4_1_2_6' name='4_1_2_6' value='Explotaciones, Ha.'>
+                    <label for='4_1_2_6'> 4.1.2.6. Aprovechamiento de las tierras labradas</label><br>
+                    <input type='checkbox' id='4_1_2_7' name='4_1_2_7' value='Ha.'>
+                    <label for='4_1_2_7'> 4.1.2.7. Aprovechamiento de las tierras labradas. Cultivos
+                      herbáceos</label><br>
+                    <input type='checkbox' id='4_1_2_8' name='4_1_2_8' value='Ha.'>
+                    <label for='4_1_2_8'> 4.1.2.8. Aprovechamiento de las tierras labradas. Cultivos Leñosos</label><br>
+                    <input type='checkbox' id='4_1_2_9' name='4_1_2_9' value='Explotaciones, Ha.'>
+                    <label for='4_1_2_9'> 4.1.2.9. Superficie regable</label><br>
+                    <input type='checkbox' id='4_1_2_10' name='4_1_2_10' value='Explotaciones, Ha.'>
+                    <label for='4_1_2_10'> 4.1.2.10. Producción ecológica</label><br>
+                    <input type='checkbox' id='4_1_2_11' name='4_1_2_11' value='Explotaciones'>
+                    <label for='4_1_2_11'> 4.1.2.11. Distribución de las explotaciones de agricultura ecológica
+                      certificada: Número de explotaciones</label><br>
+                    <input type='checkbox' id='4_1_2_12' name='4_1_2_12' value='Ha.'>
+                    <label for='4_1_2_12'> 4.1.2.12. Distribución de las explotaciones de agricultura ecológica
+                      certificada: Superficie</label><br>
+                    <input type='checkbox' id='4_1_2_13' name='4_1_2_13' value='Personas'>
+                    <label for='4_1_2_13'> 4.1.2.13. Titulares persona física por sexo</label><br>
+                    <input type='checkbox' id='4_1_2_14' name='4_1_2_14' value='Personas'>
+                    <label for='4_1_2_14'> 4.1.2.14. Titulares persona física por edad del titular</label><br>
+                    <input type='checkbox' id='4_1_2_15' name='4_1_2_15' value='Unidades de trabajo año (UTA)'>
+                    <label for='4_1_2_15'> 4.1.2.15. Unidades de trabajo año en la explotación</label><br>
+                  </form>
+                </div>
+                <li id='economia_agricultura_censoAnterior'>4.1.3. Censos Agrarios 1982, 1989, 1999</li>
+                <div id='div_economia_agricultura_censoAnterior'>
+                  <form id='form_economia_agricultura_censoAnterior' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_1_3_1' name='4_1_3_1' value='Ha.'>
+                    <label for='4_1_3_1'> 4.1.3.1. Superficie de las explotaciones agrarias (1999)</label><br>
+                    <input type='checkbox' id='4_1_3_2' name='4_1_3_2' value='Ha.'>
+                    <label for='4_1_3_2'> 4.1.3.2. Distribución de la superficie de las explotaciones agrarias
+                      (1999)</label><br>
+                    <input type='checkbox' id='4_1_3_3' name='4_1_3_3' value='Ha.'>
+                    <label for='4_1_3_3'> 4.1.3.3. Superficie de tierras labradas por aprovechamiento (1999)</label><br>
+                    <input type='checkbox' id='4_1_3_4' name='4_1_3_4' value='Ha.'>
+                    <label for='4_1_3_4'> 4.1.3.4. Superficie de las explotaciones agrarias por régimen de tenencia
+                      (1982, 1989, 1999)</label><br>
+                    <input type='checkbox' id='4_1_3_5' name='4_1_3_5' value='Ha.'>
+                    <label for='4_1_3_5'> 4.1.3.5. S.A.U. de explotaciones agrarias por régimen de tenencia (1982, 1989,
+                      1999)</label><br>
+                    <input type='checkbox' id='4_1_3_6' name='4_1_3_6' value='Explotaciones'>
+                    <label for='4_1_3_6'> 4.1.3.6. Explotaciones agrarias con SAU por tamaño de SAU (1982, 1989,
+                      1999)</label><br>
+                    <input type='checkbox' id='4_1_3_7' name='4_1_3_7' value='Explotaciones'>
+                    <label for='4_1_3_7'> 4.1.3.7. Explotaciones agrarias por tamaño de explotación (1982, 1989,
+                      1999)</label><br>
+                    <input type='checkbox' id='4_1_3_8' name='4_1_3_8' value='Explotaciones'>
+                    <label for='4_1_3_8'> 4.1.3.8. Explotaciones agrarias por soporte territorial (1982, 1989,
+                      1999)</label><br>
+                    <input type='checkbox' id='4_1_3_9' name='4_1_3_9' value='Explotaciones'>
+                    <label for='4_1_3_9'> 4.1.3.9. Explotaciones con agricultura ecológica (1999)</label><br>
+                    <input type='checkbox' id='4_1_3_10' name='4_1_3_10' value='Máquinas'>
+                    <label for='4_1_3_10'> 4.1.3.10. Máquinas por tipo (1982, 1989, 1999)</label><br>
+                    <input type='checkbox' id='4_1_3_11' name='4_1_3_11' value='Titulares'>
+                    <label for='4_1_3_11'> 4.1.3.11. Titulares de explotaciones agrícolas por edad (1982, 1989,
+                      1999)</label><br>
+                    <input type='checkbox' id='4_1_3_12' name='4_1_3_12' value='Empresarios'>
+                    <label for='4_1_3_12'> 4.1.3.12. Empresarios por ocupación principal (1989, 1999)</label><br>
+                    <input type='checkbox' id='4_1_3_13' name='4_1_3_13' value='Unidades de trabajo año (UTA)'>
+                    <label for='4_1_3_13'> 4.1.3.13. Unidades de trabajo año en explotaciones agrarias (1982, 1989,
+                      1999)</label><br>
+                  </form>
+                </div>
+
+              </ul>
+            </div>
+            <li id='ganaderia'>4.2. Ganadería</li>
+            <div id='economia_ganaderia'>
+              <form id='form_economia_ganaderia' class='seleccionCategorias'>
+                <input type='checkbox' id='4_2_1' name='4_2_1' value='Explotaciones'>
+                <label for='4_2_1'> 4.2.1. Ganadería: Número de explotaciones (Censo 2009)</label><br>
+                <input type='checkbox' id='4_2_2' name='4_2_2' value='Cabezas, Miles de cabezas de aves'>
+                <label for='4_2_2'> 4.2.2. Ganadería:Número de cabezas (Censo 2009)</label><br>
+                <input type='checkbox' id='4_2_3' name='4_2_3' value='Unidades ganaderas'>
+                <label for='4_2_3'> 4.2.3. Ganadería: Unidades ganaderas (Censo 2009)</label><br>
+                <input type='checkbox' id='4_2_4' name='4_2_4' value='Explotaciones, Cabezas, Miles de cabezas de aves'>
+                <label for='4_2_4'> 4.2.4. Ganadería de producción ecológica (Censo 2009)</label><br>
+                <input type='checkbox' id='4_2_5' name='4_2_5' value='Unidades'>
+                <label for='4_2_5'> 4.2.5. Unidades ganaderas por tipo (Censo 1999)</label><br>
+                <input type='checkbox' id='4_2_6' name='4_2_6' value='Cabezas'>
+                <label for='4_2_6'> 4.2.6. Cabezas de ganado por tipo (Censo 1999)</label><br>
+              </form>
+            </div>
+            <li id='pesca'>4.3. Pesca</li>
+            <div id='economia_pesca'>
+              <form id='form_economia_pesca' class='seleccionCategorias'>
+                <input type='checkbox' id='4_3_1' name='4_3_1' value='Toneladas, Euros, Euros/Tonelada'>
+                <label for='4_3_1'> 4.3.1. Pesca fresca subastada en las principales lonjas en Andalucía</label><br>
+              </form>
+            </div>
+            <li id='energia'>4.4. Energía</li>
+            <div id='economia_energia'>
+              <form id='form_economia_energia' class='seleccionCategorias'>
+                <input type='checkbox' id='4_4_1' name='4_4_1' value='MWh'>
+                <label for='4_4_1'> 4.4.1. Consumo de energía eléctrica por sectores</label><br>
+              </form>
+            </div>
+            <li id='turismo'>4.5. Turismo</li>
+            <div id='economia_turismo'>
+              <ul>
+                <li id='economia_turismo_hoteles'>4.5.1. Hoteles y pensiones</li>
+                <div id='div_economia_turismo_hoteles'>
+                  <form id='form_economia_turismo_hoteles' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_5_1_1' name='4_5_1_1' value='Establecimientos'>
+                    <label for='4_5_1_1'> 4.5.1.1. Establecimientos hoteleros por clase y categoría</label><br>
+                    <input type='checkbox' id='4_5_1_2' name='4_5_1_2' value='Plazas'>
+                    <label for='4_5_1_2'> 4.5.1.2. Plazas en establecimientos hoteleros por clase y
+                      categoría</label><br>
+                  </form>
+                </div>
+                <li id='economia_turismo_apartamentos'>4.5.2. Apartamentos</li>
+                <div id='div_economia_turismo_apartamentos'>
+                  <form id='form_economia_turismo_apartamentos' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_5_2_1' name='4_5_2_1' value='Apartamentos'>
+                    <label for='4_5_2_1'> 4.5.2.1. Apartamentos por categorías</label><br>
+                    <input type='checkbox' id='4_5_2_2' name='4_5_2_2' value='Plazas'>
+                    <label for='4_5_2_2'> 4.5.2.2. Plazas en apartamentos por categorías</label><br>
+                  </form>
+                </div>
+                <li id='economia_turismo_campamentos'>4.5.3. Campamentos de turismo</li>
+                <div id='div_economia_turismo_campamentos'>
+                  <form id='form_economia_turismo_campamentos' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_5_3_1' name='4_5_3_1' value='Campamentos'>
+                    <label for='4_5_3_1'> 4.5.3.1. Campamentos turísticos por categorías</label><br>
+                    <input type='checkbox' id='4_5_3_2' name='4_5_3_2' value='Plazas'>
+                    <label for='4_5_3_2'> 4.5.3.2. Plazas en campamentos turísticos por categoría</label><br>
+                  </form>
+                </div>
+                <li id='economia_turismo_establecimientos'>4.5.4. Establecimientos turísticos rurales</li>
+                <div id='div_economia_turismo_establecimientos'>
+                  <form id='form_economia_turismo_establecimientos' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_5_4_1' name='4_5_4_1' value='Establecimientos'>
+                    <label for='4_5_4_1'> 4.5.4.1. Establecimientos turísticos rurales</label><br>
+                    <input type='checkbox' id='4_5_4_2' name='4_5_4_2' value='Plazas'>
+                    <label for='4_5_4_2'> 4.5.4.2. Plazas en establecimientos turísticos rurales</label><br>
+                  </form>
+                </div>
+                <li id='economia_turismo_restaurantes'>4.5.5. Restaurantes y cafeterías</li>
+                <div id='div_economia_turismo_restaurantes'>
+                  <form id='form_economia_turismo_restaurantes' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_5_5_1' name='4_5_5_1' value='Restaurantes'>
+                    <label for='4_5_5_1'> 4.5.5.1. Restaurantes por categorías. (1988-2009)</label><br>
+                    <input type='checkbox' id='4_5_5_2' name='4_5_5_2' value='Plazas'>
+                    <label for='4_5_5_2'> 4.5.5.2. Plazas en restaurantes por categoría. (1988-2003)</label><br>
+                    <input type='checkbox' id='4_5_5_3' name='4_5_5_3' value='Cafeterías'>
+                    <label for='4_5_5_3'> 4.5.5.3. Cafeterías por categorías. (1988-2009)</label><br>
+                    <input type='checkbox' id='4_5_5_4' name='4_5_5_4' value='Plazas'>
+                    <label for='4_5_5_4'> 4.5.5.4. Plazas en cafeterías por categorías. (1988-2003)</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='construccion'>4.6. Construcción y vivienda</li>
+            <div id='economia_construccion'>
+              <form id='form_economia_construccion' class='seleccionCategorias'>
+                <input type='checkbox' id='4_6_1' name='4_6_1' value='Transacciones'>
+                <label for='4_6_1'> 4.6.1. Transacciones inmobiliarias según régimen de protección</label><br>
+                <input type='checkbox' id='4_6_2' name='4_6_2' value='Transacciones'>
+                <label for='4_6_2'> 4.6.2. Transacciones inmobiliarias según antigüedad de la vivienda</label><br>
+                <input type='checkbox' id='4_6_3' name='4_6_3' value='Actuaciones'>
+                <label for='4_6_3'> 4.6.3. Actuaciones protegidas de vivienda y suelo</label><br>
+                <input type='checkbox' id='4_6_4' name='4_6_4' value='Viviendas'>
+                <label for='4_6_4'> 4.6.4. Viviendas libres de nueva planta. (1999-2002)</label><br>
+              </form>
+            </div>
+            <li id='transporte'>4.7. Transporte</li>
+            <div id='economia_transporte'>
+              <ul>
+                <li id='economia_transporte_transporte'>4.7.1. Transporte por carretera</li>
+                <div id='div_economia_transporte_transporte'>
+                  <ul>
+                    <li id='economia_transporte_transporte_vehiculos'>4.7.1.1. Parque de vehículos</li>
+                    <div id='div_economia_transporte_transporte_vehiculos'>
+                      <form id='form_economia_transporte_transporte_vehiculos' class='seleccionCategorias'>
+                        <input type='checkbox' id='4_7_1_1_1' name='4_7_1_1_1' value='Vehículos'>
+                        <label for='4_7_1_1_1'> 4.7.1.1.1. Parque de vehículos por tipo</label><br>
+                        <input type='checkbox' id='4_7_1_1_2' name='4_7_1_1_2' value='Vehículos'>
+                        <label for='4_7_1_1_2'> 4.7.1.1.2. Parque de vehículos por tipo de carburante</label><br>
+                        <input type='checkbox' id='4_7_1_1_3' name='4_7_1_1_3' value='Vehículos'>
+                        <label for='4_7_1_1_3'> 4.7.1.1.3. Parque de vehículos por tipo y carburante</label><br>
+                        <input type='checkbox' id='4_7_1_1_4' name='4_7_1_1_4' value='Turismos'>
+                        <label for='4_7_1_1_4'> 4.7.1.1.4. Parque de turismos según cilindrada (2002-2017)</label><br>
+                        <input type='checkbox' id='4_7_1_1_5' name='4_7_1_1_5' value='Vehículos'>
+                        <label for='4_7_1_1_5'> 4.7.1.1.5. Parque de vehículos por tipo y servicio
+                          (1991-2003)</label><br>
+                        <input type='checkbox' id='4_7_1_1_6' name='4_7_1_1_6' value='Camiones'>
+                        <label for='4_7_1_1_6'> 4.7.1.1.6. Parque de camiones por carga (1991-2003)</label><br>
+                      </form>
+                    </div>
+                    <li id='economia_transporte_transporte_matriculaciones'>4.7.1.2. Matriculaciones</li>
+                    <div id='div_economia_transporte_transporte_matriculaciones'>
+                      <form id='form_economia_transporte_transporte_matriculaciones' class='seleccionCategorias'>
+                        <input type='checkbox' id='4_7_1_2_1' name='4_7_1_2_1' value='Vehículos'>
+                        <label for='4_7_1_2_1'> 4.7.1.2.1. Vehículos matriculados por mes</label><br>
+                        <input type='checkbox' id='4_7_1_2_2' name='4_7_1_2_2' value='Vehículos'>
+                        <label for='4_7_1_2_2'> 4.7.1.2.2. Vehículos matriculados por tipo de carrocería</label><br>
+                      </form>
+                    </div>
+                    <li id='economia_transporte_transporte_conductores'>4.7.1.3. Conductores</li>
+                    <div id='div_economia_transporte_transporte_conductores'>
+                      <form id='form_economia_transporte_transporte_conductores' class='seleccionCategorias'>
+                        <input type='checkbox' id='4_7_1_3_1' name='4_7_1_3_1' value='Permisos vigentes'>
+                        <label for='4_7_1_3_1'> 4.7.1.3.1. Permisos y licencias vigentes por sexo</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+                <li id='economia_transporte_autorizaciones'>4.7.2. Autorizaciones de transporte por carretera</li>
+                <div id='div_economia_transporte_autorizaciones'>
+                  <form id='form_economia_transporte_autorizaciones' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_7_2_1' name='4_7_2_1' value='Vehículos, Viajeros'>
+                    <label for='4_7_2_1'> 4.7.2.1. Autorizaciones de transporte por tipo</label><br>
+                    <input type='checkbox' id='4_7_2_2' name='4_7_2_2' value='Vehículos'>
+                    <label for='4_7_2_2'> 4.7.2.2. Autorizaciones de transporte público de mercancías según
+                      tipo</label><br>
+                    <input type='checkbox' id='4_7_2_3' name='4_7_2_3' value='Vehículos'>
+                    <label for='4_7_2_3'> 4.7.2.3. Autorizaciones de transporte privado de mercancías según
+                      tipo</label><br>
+                    <input type='checkbox' id='4_7_2_4' name='4_7_2_4' value='Vehículos'>
+                    <label for='4_7_2_4'> 4.7.2.4. Autorizaciones de transporte de mercancías según ámbito</label><br>
+                    <input type='checkbox' id='4_7_2_5' name='4_7_2_5' value='Vehículos'>
+                    <label for='4_7_2_5'> 4.7.2.5. Autorizaciones de transporte de viajeros según tipo de
+                      servicio</label><br>
+                    <input type='checkbox' id='4_7_2_6' name='4_7_2_6' value='Vehículos'>
+                    <label for='4_7_2_6'> 4.7.2.6. Autorizaciones de transporte de viajeros según tipo de
+                      licencia</label><br>
+                    <input type='checkbox' id='4_7_2_7' name='4_7_2_7' value='Vehículos'>
+                    <label for='4_7_2_7'> 4.7.2.7. Autorizaciones de transporte público de viajeros según número de
+                      viajeros</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='comunicaciones'>4.8. Comunicaciones</li>
+            <div id='economia_comunicaciones'>
+              <form id='form_economia_comunicaciones' class='seleccionCategorias'>
+                <input type='checkbox' id='4_8_1' name='4_8_1' value='Ratio de hogares cubiertos'>
+                <label for='4_8_1'> 4.8.1. Cobertura de banda ancha por tipo de tecnología</label><br>
+                <input type='checkbox' id='4_8_2' name='4_8_2' value='Líneas telefónicas'>
+                <label for='4_8_2'> 4.8.2. Líneas de la compañía Telefónica en servicio según tipo de línea
+                  (1988-2013)</label><br>
+              </form>
+            </div>
+            <li id='inversiones'>4.9. Inversiones</li>
+            <div id='economia_inversiones'>
+              <form id='form_economia_inversiones' class='seleccionCategorias'>
+                <input type='checkbox' id='4_9_1' name='4_9_1' value='Euros'>
+                <label for='4_9_1'> 4.9.1. Inversiones en el Registro Industrial según sector económico
+                  (1998-2012)</label><br>
+              </form>
+            </div>
+            <li id='financiero'>4.10. Sistema financiero</li>
+            <div id='economia_financiero'>
+              <form id='form_economia_financiero' class='seleccionCategorias'>
+                <input type='checkbox' id='4_10_1' name='4_10_1' value='Oficinas'>
+                <label for='4_10_1'> 4.10.1. Oficinas de entidades de crédito por tipo</label><br>
+              </form>
+            </div>
+            <li id='empresarial'>4.11. Actividad empresarial</li>
+            <div id='economia_empresarial'>
+              <ul>
+                <li id='economia_empresarial_empresas'>4.11.1. Empresas</li>
+                <div id='div_economia_empresarial_empresas'>
+                  <form id='form_economia_empresarial_empresas' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_11_1_1' name='4_11_1_1' value='Empresas'>
+                    <label for='4_11_1_1'> 4.11.1.1. Número de empresas</label><br>
+                    <input type='checkbox' id='4_11_1_2' name='4_11_1_2' value='Empresas'>
+                    <label for='4_11_1_2'> 4.11.1.2. Empresas por actividad económica según CNAE 09</label><br>
+                    <input type='checkbox' id='4_11_1_3' name='4_11_1_3' value='Empresas'>
+                    <label for='4_11_1_3'> 4.11.1.3. Empresas por actividad económica (CNAE-93)</label><br>
+                    <input type='checkbox' id='4_11_1_4' name='4_11_1_4' value='Empresas'>
+                    <label for='4_11_1_4'> 4.11.1.4. Empresas según forma jurídica</label><br>
+                    <input type='checkbox' id='4_11_1_5' name='4_11_1_5' value='Empresas'>
+                    <label for='4_11_1_5'> 4.11.1.5. Empresas según tramo de empleo asalariado</label><br>
+                    <input type='checkbox' id='4_11_1_6' name='4_11_1_6' value='Empresas'>
+                    <label for='4_11_1_6'> 4.11.1.6. Empresas según tramo de empleo</label><br>
+                    <input type='checkbox' id='4_11_1_7' name='4_11_1_7' value='Empresas'>
+                    <label for='4_11_1_7'> 4.11.1.7. Empresas según tramo de empleo. Serie completa desde
+                      1998</label><br>
+                    <input type='checkbox' id='4_11_1_8' name='4_11_1_8' value='Sociedades'>
+                    <label for='4_11_1_8'> 4.11.1.8. Sociedades mercantiles creadas por sector de actividad</label><br>
+                  </form>
+                </div>
+                <li id='economia_empresarial_establecimientos'>4.11.2. Establecimientos</li>
+                <div id='div_economia_empresarial_establecimientos'>
+                  <form id='form_economia_empresarial_establecimientos' class='seleccionCategorias'>
+                    <input type='checkbox' id='4_11_2_1' name='4_11_2_1' value='Establecimientos'>
+                    <label for='4_11_2_1'> 4.11.2.1. Número de establecimientos</label><br>
+                    <input type='checkbox' id='4_11_2_2' name='4_11_2_2' value='Establecimientos'>
+                    <label for='4_11_2_2'> 4.11.2.2. Establecimientos por actividad económica según CNAE 09</label><br>
+                    <input type='checkbox' id='4_11_2_3' name='4_11_2_3' value='Establecimientos'>
+                    <label for='4_11_2_3'> 4.11.2.3. Establecimientos por actividad económica según CNAE 93.
+                      (1998-2009)</label><br>
+                    <input type='checkbox' id='4_11_2_4' name='4_11_2_4' value='Establecimientos'>
+                    <label for='4_11_2_4'> 4.11.2.4. Establecimientos según forma jurídica</label><br>
+                    <input type='checkbox' id='4_11_2_5' name='4_11_2_5' value='Establecimientos'>
+                    <label for='4_11_2_5'> 4.11.2.5. Establecimientos según tramo de empleo asalariado</label><br>
+                    <input type='checkbox' id='4_11_2_6' name='4_11_2_6' value='Establecimientos'>
+                    <label for='4_11_2_6'> 4.11.2.6. Establecimientos según tramo de empleo</label><br>
+                    <input type='checkbox' id='4_11_2_7' name='4_11_2_7' value='Establecimientos'>
+                    <label for='4_11_2_7'> 4.11.2.7. Establecimientos según tramo de empleo. Serie completa desde
+                      1998</label><br>
+                    <input type='checkbox' id='4_11_2_8' name='4_11_2_8' value='Locales'>
+                    <label for='4_11_2_8'> 4.11.2.8. Número de locales por tipo. Censo 2001</label><br>
+                    <input type='checkbox' id='4_11_2_9' name='4_11_2_9' value='Locales'>
+                    <label for='4_11_2_9'> 4.11.2.9. Número de locales por tipo. Censo 1990</label><br>
+                    <input type='checkbox' id='4_11_2_10' name='4_11_2_10' value='Locales'>
+                    <label for='4_11_2_10'> 4.11.2.10. Número de locales por sector de actividad. Censo 1990</label><br>
+                    <input type='checkbox' id='4_11_2_11' name='4_11_2_11' value='Personas'>
+                    <label for='4_11_2_11'> 4.11.2.11. Personas ocupadas en locales activos. Censo 1990</label><br>
+                    <input type='checkbox' id='4_11_2_12' name='4_11_2_12' value='Personas'>
+                    <label for='4_11_2_12'> 4.11.2.12. Personas ocupadas en locales-establecimiento por sectores de
+                      actividad. Censo 1990</label><br>
+                  </form>
+                </div>
+                <li id='economia_empresarial_social'>4.11.3. Empresas de economía social</li>
+                <div id='div_economia_empresarial_social'>
+                  <ul>
+                    <li id='economia_empresarial_social_cooperativas'>4.11.3.1. Cooperativas</li>
+                    <div id='div_economia_empresarial_social_cooperativas'>
+                      <form id='form_economia_empresarial_social_cooperativas' class='seleccionCategorias'>
+                        <input type='checkbox' id='4_11_3_1_1' name='4_11_3_1_1' value='Sociedades, Euros'>
+                        <label for='4_11_3_1_1'> 4.11.3.1.1. Número de sociedades cooperativas constituidas y
+                          capital</label><br>
+                        <input type='checkbox' id='4_11_3_1_2' name='4_11_3_1_2' value='Socios'>
+                        <label for='4_11_3_1_2'> 4.11.3.1.2. Sociedades cooperativas constituidas: número de socios
+                          iniciales por sexo y tipo</label><br>
+                        <input type='checkbox' id='4_11_3_1_3' name='4_11_3_1_3' value='Cooperativas, Socios, Trabajadores'>
+                        <label for='4_11_3_1_3'> 4.11.3.1.3. Cooperativas, socios y trabajadores (1996 y
+                          2001)</label><br>
+                        <input type='checkbox' id='4_11_3_1_4' name='4_11_3_1_4' value='Cooperativas, Socios, Trabajadores'>
+                        <label for='4_11_3_1_4'> 4.11.3.1.4. Cooperativas, socios y trabajadores por actividad económica
+                          (2001)</label><br>
+                      </form>
+                    </div>
+                    <li id='economia_empresarial_social_sociedades'>4.11.3.2. Sociedades Laborales</li>
+                    <div id='div_economia_empresarial_social_sociedades'>
+                      <form id='form_economia_empresarial_social_sociedades' class='seleccionCategorias'>
+                        <input type='checkbox' id='4_11_3_2_1' name='4_11_3_2_1' value='Socidades, Euros'>
+                        <label for='4_11_3_2_1'> 4.11.3.2.1. Número de sociedades laborales limitadas registradas y
+                          capital</label><br>
+                        <input type='checkbox' id='4_11_3_2_2' name='4_11_3_2_2' value='Socios'>
+                        <label for='4_11_3_2_2'> 4.11.3.2.2. Sociedades laborales limitadas registradas: número de
+                          socios iniciales por sexo y tipo</label><br>
+                        <input type='checkbox' id='4_11_3_2_3' name='4_11_3_2_3' value='Sociedades, Socios, Trabajadores'>
+                        <label for='4_11_3_2_3'> 4.11.3.2.3. Sociedades Laborales por tipo, socios y trabajadores (1996
+                          y 2001)</label><br>
+                        <input type='checkbox' id='4_11_3_2_4' name='4_11_3_2_4' value='Sociedades, Socios, Trabajadores'>
+                        <label for='4_11_3_2_4'> 4.11.3.2.4. Sociedades Anónimas Laborales, socios y trabajadores por
+                          actividad económica (1996 y 2001)</label><br>
+                        <input type='checkbox' id='4_11_3_2_5' name='4_11_3_2_5' value='Sociedades, Socios, Trabajadores'>
+                        <label for='4_11_3_2_5'> 4.11.3.2.5. Sociedades Limitadas Laborales, socios y trabajadores por
+                          actividad económica (2001)</label><br>
+                      </form>
+                    </div>
+                  </ul>
+
+                </div>
+              </ul>
+            </div>
+          </ul>
+        </div>
+
+        <!--                   /////////////////////                                                     -->
+        <h3 id='title_trabajo'>5. Mercado de trabajo</h3>
+        <div id='trabajo'>
+          <ul>
+            <li id='trabPoblacion'>5.1. Población</li>
+            <div id='trabajo_trabPoblacion'>
+              <ul>
+                <li id='trabajo_trabPoblacion_censos'>5.1.1. Censos</li>
+                <div id='div_trabajo_trabPoblacion_censos'>
+                  <form id='form_trabajo_trabPoblacion_censos' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_1_1_1' name='5_1_1_1' value='Número de personas'>
+                    <label for='5_1_1_1'> 5.1.1.1. Población de más de 16 años por nivel de estudios completados (Censo
+                      2011)</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='trabActividad'>5.2. Actividad</li>
+            <div id='trabajo_trabActividad'>
+              <ul>
+                <li id='trabajo_trabActividad_censos'>5.2.1. Censos</li>
+                <div id='div_trabajo_trabActividad_censos'>
+                  <form id='form_trabajo_trabActividad_censos' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_2_1_1' name='5_2_1_1' value='Número de personas'>
+                    <label for='5_2_1_1'> 5.2.1.1. Población activa que reside en viviendas familiares por sexo (Censo
+                      2011)</label><br>
+                    <input type='checkbox' id='5_2_1_2' name='5_2_1_2' value='Número de personas'>
+                    <label for='5_2_1_2'> 5.2.1.2. Población inactiva que reside en viviendas familiares por sexo (Censo
+                      2011)</label><br>
+                    <input type='checkbox' id='5_2_1_3' name='5_2_1_3' value='Número de personas'>
+                    <label for='5_2_1_3'> 5.2.1.3. Población inactiva que reside en viviendas familiares por situación
+                      (Censo 2011)</label><br>
+                    <input type='checkbox' id='5_2_1_4' name='5_2_1_4' value='Personas activas'>
+                    <label for='5_2_1_4'> 5.2.1.4. Población activa por sexo (Censo 2001)</label><br>
+                    <input type='checkbox' id='5_2_1_5' name='5_2_1_5' value='Porcentaje'>
+                    <label for='5_2_1_5'> 5.2.1.5. Tasa de actividad por sexo (Censos 1981, 1986, 1991,
+                      2001)</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='trabEmpleo'>5.3. Empleo</li>
+            <div id='trabajo_trabEmpleo'>
+              <ul>
+                <li id='trabajo_trabEmpleo_censos'>5.3.1. Censos</li>
+                <div id='div_trabajo_trabEmpleo_censos'>
+                  <form id='form_trabajo_trabEmpleo_censos' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_3_1_1' name='5_3_1_1' value='Número de personas'>
+                    <label for='5_3_1_1'> 5.3.1.1. Población ocupada que reside en viviendas familiares por sexo (Censo
+                      2011)</label><br>
+                    <input type='checkbox' id='5_3_1_2' name='5_3_1_2' value='Personas ocupadas'>
+                    <label for='5_3_1_2'> 5.3.1.2. Población ocupada por sexo (Censo 2001)</label><br>
+                    <input type='checkbox' id='5_3_1_3' name='5_3_1_3' value='Personas ocupadas'>
+                    <label for='5_3_1_3'> 5.3.1.3. Población ocupada por actividad económica y sexo (Censo
+                      2001)</label><br>
+                    <input type='checkbox' id='5_3_1_4' name='5_3_1_4' value='Personas ocupadas'>
+                    <label for='5_3_1_4'> 5.3.1.4. Población ocupada por situación profesional y sexo (Censo
+                      2001)</label><br>
+                    <input type='checkbox' id='5_3_1_5' name='5_3_1_5' value='Porcentaje'>
+                    <label for='5_3_1_5'> 5.3.1.5. Tasa de empleo por sexo (Censo 2001)</label><br>
+                    <input type='checkbox' id='5_3_1_6' name='5_3_1_6' value='Porcentaje'>
+                    <label for='5_3_1_6'> 5.3.1.6. Tasa de ocupación por sexo (Censo 2001)</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabEmpleo_contratos'>5.3.2. Contratos registrados</li>
+                <div id='div_trabajo_trabEmpleo_contratos'>
+                  <form id='form_trabajo_trabEmpleo_contratos' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_3_2_1' name='5_3_2_1' value='Contratos'>
+                    <label for='5_3_2_1'> 5.3.2.1. Contratos registrados por sexo</label><br>
+                    <input type='checkbox' id='5_3_2_2' name='5_3_2_2' value='Contratos'>
+                    <label for='5_3_2_2'> 5.3.2.2. Contratos registrados por edad y sexo</label><br>
+                    <input type='checkbox' id='5_3_2_3' name='5_3_2_3' value='Contratos'>
+                    <label for='5_3_2_3'> 5.3.2.3. Contratos registrados por tipo de contrato y sexo</label><br>
+                    <input type='checkbox' id='5_3_2_4' name='5_3_2_4' value='Contratos'>
+                    <label for='5_3_2_4'> 5.3.2.4. Contratos registrados por tipo de contrato, tipo de jornada y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_5' name='5_3_2_5' value='Contratos'>
+                    <label for='5_3_2_5'> 5.3.2.5. Contratos registrados por nacionalidad (española/extranjera) y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_6' name='5_3_2_6' value='Contratos'>
+                    <label for='5_3_2_6'> 5.3.2.6. Contratos registrados a españoles por tipo de contrato y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_7' name='5_3_2_7' value='Contratos'>
+                    <label for='5_3_2_7'> 5.3.2.7. Contratos registrados a extranjeros por tipo de contrato y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_8' name='5_3_2_8' value='Contratos'>
+                    <label for='5_3_2_8'> 5.3.2.8. Contratos registrados por nivel educativo y sexo</label><br>
+                    <input type='checkbox' id='5_3_2_9' name='5_3_2_9' value='Contratos'>
+                    <label for='5_3_2_9'> 5.3.2.9. Contratos registrados a españoles por nivel educativo y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_10' name='5_3_2_10' value='Contratos'>
+                    <label for='5_3_2_10'> 5.3.2.10. Contratos registrados a extranjeros por nivel educativo y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_11' name='5_3_2_11' value='Contratos'>
+                    <label for='5_3_2_11'> 5.3.2.11. Contratos registrados por sector de actividad y sexo</label><br>
+                    <input type='checkbox' id='5_3_2_12' name='5_3_2_12' value='Contratos'>
+                    <label for='5_3_2_12'> 5.3.2.12. Contratos registrados a españoles por sector de actividad y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_3_2_13' name='5_3_2_13' value='Contratos'>
+                    <label for='5_3_2_13'> 5.3.2.13. Contratos registrados a extranjeros por sector de actividad y
+                      sexo</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabEmpleo_afiliados'>5.3.3. Afiliados a la Seguridad Social</li>
+                <div id='div_trabajo_trabEmpleo_afiliados'>
+                  <ul>
+                    <li id='trabajo_trabEmpleo_afiliados_trabajo'>5.3.3.1. Por lugar de trabajo</li>
+                    <div id='div_trabajo_trabEmpleo_afiliados_trabajo'>
+                      <form id='form_trabajo_trabEmpleo_afiliados_trabajo' class='seleccionCategorias'>
+                        <input type='checkbox' id='5_3_3_1_1' name='5_3_3_1_1' value='Número de afiliaciones'>
+                        <label for='5_3_3_1_1'> 5.3.3.1.1. Afiliaciones según municipio de trabajo, por régimen y
+                          sexo</label><br>
+                        <input type='checkbox' id='5_3_3_1_2' name='5_3_3_1_2' value='Número de afiliaciones'>
+                        <label for='5_3_3_1_2'> 5.3.3.1.2. Afiliaciones según municipio de trabajo, por relación laboral
+                          y sexo</label><br>
+                          <input type='checkbox' id='5_3_3_1_3' name='5_3_3_1_3' value='Número de afiliaciones'>
+                        <label for='5_3_3_1_3'> 5.3.3.1.3. Afiliaciones según municipio de trabajo, por relación laboral y sexo                          
+                        </label><br>
+                      </form>
+                    </div>
+                    <li id='trabajo_trabEmpleo_afiliados_residencia'>5.3.3.2. Por lugar de residencia</li>
+                    <div id='div_trabajo_trabEmpleo_afiliados_residencia'>
+                      <form id='form_trabajo_trabEmpleo_afiliados_residencia' class='seleccionCategorias'>
+                        <input type='checkbox' id='5_3_3_2_1' name='5_3_3_2_1' value='Número de afiliaciones'>
+                        <label for='5_3_3_2_1'> 5.3.3.2.1. Afiliaciones según municipio de residencia, por régimen y
+                          sexo</label><br>
+                        <input type='checkbox' id='5_3_3_2_2' name='5_3_3_2_2' value='Número de afiliaciones'>
+                        <label for='5_3_3_2_2'> 5.3.3.2.2. Afiliaciones según municipio de residencia, por relación
+                          laboral y sexo</label><br>
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <li id='trabParo'>5.4. Paro</li>
+            <div id='trabajo_trabParo'>
+              <ul>
+                <li id='trabajo_trabParo_censos'>5.4.1. Censos</li>
+                <div id='div_trabajo_trabParo_censos'>
+                  <form id='form_trabajo_trabParo_censos' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_4_1_1' name='5_4_1_1' value='Número de personas'>
+                    <label for='5_4_1_1'> 5.4.1.1. Población parada que reside en viviendas familiares por sexo (Censo
+                      2011)</label><br>
+                    <input type='checkbox' id='5_4_1_2' name='5_4_1_2' value='Número de personas'>
+                    <label for='5_4_1_2'> 5.4.1.2. Población parada que reside viviendas familiares según hayan o no
+                      trabajado antes (Censo 2011)</label><br>
+                    <input type='checkbox' id='5_4_1_3' name='5_4_1_3' value='Parados'>
+                    <label for='5_4_1_3'> 5.4.1.3. Población parada por sexo (Censo 2001)</label><br>
+                    <input type='checkbox' id='5_4_1_4' name='5_4_1_4' value='Porcentaje'>
+                    <label for='5_4_1_4'> 5.4.1.4. Tasa de paro por sexo (Censo 2001)</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabParo_paro'>5.4.2. Paro registrado (medias anuales)</li>
+                <div id='div_trabajo_trabParo_paro'>
+                  <form id='form_trabajo_trabParo_paro' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_4_2_1' name='5_4_2_1' value='Parados'>
+                    <label for='5_4_2_1'> 5.4.2.1. Paro registrado por sexo</label><br>
+                    <input type='checkbox' id='5_4_2_2' name='5_4_2_2' value='Parados'>
+                    <label for='5_4_2_2'> 5.4.2.2. Paro registrado por edad y sexo</label><br>
+                    <input type='checkbox' id='5_4_2_3' name='5_4_2_3' value='Parados'>
+                    <label for='5_4_2_3'> 5.4.2.3. Paro registrado por nivel de estudios terminados y sexo</label><br>
+                    <input type='checkbox' id='5_4_2_4' name='5_4_2_4' value='Parados'>
+                    <label for='5_4_2_4'> 5.4.2.4. Paro registrado por nacionalidad y sexo</label><br>
+                    <input type='checkbox' id='5_4_2_5' name='5_4_2_5' value='Parados'>
+                    <label for='5_4_2_5'> 5.4.2.5. Paro registrado por grupo principal de ocupación solicitado (CNO 11)
+                      y sexo</label><br>
+                    <input type='checkbox' id='5_4_2_6' name='5_4_2_6' value='Parados'>
+                    <label for='5_4_2_6'> 5.4.2.6. Paro registrado por grupo principal de ocupación solicitado (CNO 94)
+                      y sexo (2006-2010)</label><br>
+                    <input type='checkbox' id='5_4_2_7' name='5_4_2_7' value='Parados'>
+                    <label for='5_4_2_7'> 5.4.2.7. Paro registrado por sectores de actividad según CNAE 09 y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_4_2_8' name='5_4_2_8' value='Parados'>
+                    <label for='5_4_2_8'> 5.4.2.8. Paro registrado por sectores de actividad según CNAE 93 y sexo
+                      (2006-2008)</label><br>
+                    <input type='checkbox' id='5_4_2_9' name='5_4_2_9' value='Parados'>
+                    <label for='5_4_2_9'> 5.4.2.9. Paro registrado según duración de la demanda y sexo</label><br>
+                    <input type='checkbox' id='5_4_2_10' name='5_4_2_10' value='Parados'>
+                    <label for='5_4_2_10'> 5.4.2.10. Paro registrado según ámbito de búsqueda y sexo</label><br>
+                    <input type='checkbox' id='5_4_2_11' name='5_4_2_11' value='Parados'>
+                    <label for='5_4_2_11'> 5.4.2.11. Paro registrado por grupos de edad y sexo (1997-2004)</label><br>
+                    <input type='checkbox' id='5_4_2_12' name='5_4_2_12' value='Parados'>
+                    <label for='5_4_2_12'> 5.4.2.12. Paro registrado por nivel estudios terminados
+                      (1997-2004)</label><br>
+                    <input type='checkbox' id='5_4_2_13' name='5_4_2_13' value='Parados'>
+                    <label for='5_4_2_13'> 5.4.2.13. Paro registrado por grupos de ocupación solicitada
+                      (1997-2004)</label><br>
+                    <input type='checkbox' id='5_4_2_14' name='5_4_2_14' value='Parados'>
+                    <label for='5_4_2_14'> 5.4.2.14. Paro registrado por secciones de actividad (1997-2004)</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabParo_trabajadores'>5.4.3. Trabajadores eventuales agrarios subsidiados (TEAS)</li>
+                <div id='div_trabajo_trabParo_trabajadores'>
+                  <form id='form_trabajo_trabParo_trabajadores' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_4_3_1' name='5_4_3_1' value='Parados'>
+                    <label for='5_4_3_1'> 5.4.3.1. Trabajadores eventuales agrarios subsidiados (TEAS) por
+                      sexo</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabParo_demandantes'>5.4.4. Demandantes no ocupados (DENOS)</li>
+                <div id='div_trabajo_trabParo_demandante'>
+                  <form id='form_trabajo_trabParo_demandante' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_4_4_1' name='5_4_4_1' value='Demandantes no ocupados'>
+                    <label for='5_4_4_1'> 5.4.4.1. Demandantes no ocupados</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabParo_indicadores'>5.4.5. Indicadores</li>
+                <div id='div_trabajo_trabParo_indicadores'>
+                  <form id='form_trabajo_trabParo_indicadores' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_4_5_1' name='5_4_5_1' value='Demandantes, Afiliaciones, Tasa anual'>
+                    <label for='5_4_5_1'> 5.4.5.1. Tasa municipal de desempleo. Media anual</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='trabPensiones'>5.5. Pensiones</li>
+            <div id='trabajo_trabPensiones'>
+              <ul>
+                <li id='trabajo_trabPensiones_contributivas'>5.5.1. Pensiones contributivas</li>
+                <div id='div_trabajo_trabPensiones_contributivas'>
+                  <form id='form_trabajo_trabPensiones_contributivas' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_5_1_1' name='5_5_1_1' value='Unidades, Euros'>
+                    <label for='5_5_1_1'> 5.5.1.1. Número de pensiones y pensión media según grupos de edad y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_5_1_2' name='5_5_1_2' value='Unidades, Euros'>
+                    <label for='5_5_1_2'> 5.5.1.2. Número de pensiones y pensión media por clase de pensión</label><br>
+                    <input type='checkbox' id='5_5_1_3' name='5_5_1_3' value='Unidades, Euros'>
+                    <label for='5_5_1_3'> 5.5.1.3. Número de pensiones de jubilación y pensión media por
+                      sexo</label><br>
+                    <input type='checkbox' id='5_5_1_4' name='5_5_1_4' value='Unidades, Euros'>
+                    <label for='5_5_1_4'> 5.5.1.4. Número de pensionistas y pensión media según grupos de edad y
+                      sexo</label><br>
+                    <input type='checkbox' id='5_5_1_5' name='5_5_1_5' value='Unidades, Euros'>
+                    <label for='5_5_1_5'> 5.5.1.5. Número de pensionistas con pensiones de jubilación y pensión media
+                      por sexo</label><br>
+                    <input type='checkbox' id='5_5_1_6' name='5_5_1_6' value='Unidades'>
+                    <label for='5_5_1_6'> 5.5.1.6. Número de pensionistas según tramo de ingresos percibidos en
+                      pensiones</label><br>
+                  </form>
+                </div>
+                <li id='trabajo_trabPensiones_noContributivas'>5.5.2. Pensiones no contributivas</li>
+                <div id='div_trabajo_trabPensiones_noContributivas'>
+                  <form id='form_trabajo_trabPensiones_noContributivas' class='seleccionCategorias'>
+                    <input type='checkbox' id='5_5_2_1' name='5_5_2_1' value='Personas beneficiarias'>
+                    <label for='5_5_2_1'> 5.5.2.1. Pensiones no contributivas de la Seguridad Social</label><br>
+                    <input type='checkbox' id='5_5_2_2' name='5_5_2_2' value='Euros/mes'>
+                    <label for='5_5_2_2'> 5.5.2.2. Importe de pensiones no contributivas de la Seguridad
+                      Social</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+          </ul>
+        </div>
+
+        <!--                   /////////////////////                                                     -->
+        <h3 id='title_hacienda'>6. Hacienda</h3>
+        <div id='hacienda'>
+          <ul>
+            <li id='cuentas'>6.1. Cuentas de las Administraciones Públicas</li>
+            <div id='hacienda_cuentas'>
+              <ul>
+                <li id='hacienda_cuentas_locales'>6.1.1. Presupuesto de las corporaciones locales</li>
+                <div id='div_hacienda_cuentas_locales'>
+                  <form id='form_hacienda_cuentas_locales' class='seleccionCategorias'>
+                    <input type='checkbox' id='6_1_1_1' name='6_1_1_1' value='Euros'>
+                    <label for='6_1_1_1'> 6.1.1.1. Presupuesto liquidado de ingresos por capítulos</label><br>
+                    <input type='checkbox' id='6_1_1_2' name='6_1_1_2' value='Euros'>
+                    <label for='6_1_1_2'> 6.1.1.2. Presupuesto liquidado de gastos por capítulos</label><br>
+                    <input type='checkbox' id='6_1_1_3' name='6_1_1_3' value='Euros'>
+                    <label for='6_1_1_3'> 6.1.1.3. Superávit o déficit del presupuesto corriente</label><br>
+                    <input type='checkbox' id='6_1_1_4' name='6_1_1_4' value='Euros'>
+                    <label for='6_1_1_4'> 6.1.1.4. Ingresos y gastos por habitante</label><br>
+                    <input type='checkbox' id='6_1_1_5' name='6_1_1_5' value='Euros'>
+                    <label for='6_1_1_5'> 6.1.1.5. Ingresos fiscales por habitante</label><br>
+                    <input type='checkbox' id='6_1_1_6' name='6_1_1_6' value='Euros'>
+                    <label for='6_1_1_6'> 6.1.1.6. Carga financiera</label><br>
+                    <input type='checkbox' id='6_1_1_7' name='6_1_1_7' value='Euros'>
+                    <label for='6_1_1_7'> 6.1.1.7. Ahorro bruto y Ahorro neto</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='estCatastrales'>6.2. Estadísticas catastrales</li>
+            <div id='hacienda_estCatastrales'>
+              <ul>
+                <li id='hacienda_estCatastrales_urbana'>6.2.1. Impuesto sobre bienes inmuebles de naturaleza urbana</li>
+                <div id='div_hacienda_estCatastrales_urbana'>
+                  <form id='form_hacienda_estCatastrales_urbana' class='seleccionCategorias'>
+                    <input type='checkbox' id='6_2_1_1' name='6_2_1_1' value='Recibos'>
+                    <label for='6_2_1_1'> 6.2.1.1. I.B.I. de naturaleza urbana: Número de recibos</label><br>
+                    <input type='checkbox' id='6_2_1_2' name='6_2_1_2' value='Euros'>
+                    <label for='6_2_1_2'> 6.2.1.2. I.B.I. de naturaleza urbana: Valor catastral</label><br>
+                    <input type='checkbox' id='6_2_1_3' name='6_2_1_3' value='Euros'>
+                    <label for='6_2_1_3'> 6.2.1.3. I.B.I. de naturaleza urbana: Base imponible</label><br>
+                    <input type='checkbox' id='6_2_1_4' name='6_2_1_4' value='Euros'>
+                    <label for='6_2_1_4'> 6.2.1.4. I.B.I. de naturaleza urbana: Cuota íntegra</label><br>
+                    <input type='checkbox' id='6_2_1_5' name='6_2_1_5' value='Bienes inmuebles'>
+                    <label for='6_2_1_5'> 6.2.1.5. I.B.I. de naturaleza urbana: Número de bienes inmuebles por
+                      uso</label><br>
+                  </form>
+                </div>
+                <li id='hacienda_estCatastrales_rustica'>6.2.2. Impuesto sobre bienes inmuebles de naturaleza rústica
+                </li>
+                <div id='div_hacienda_estCatastrales_rustica'>
+                  <form id='form_hacienda_estCatastrales_rustica' class='seleccionCategorias'>
+                    <input type='checkbox' id='6_2_2_1' name='6_2_2_1' value='Titulares'>
+                    <label for='6_2_2_1'> 6.2.2.1. I.B.I. de naturaleza rústica: Titulares catastrales</label><br>
+                    <input type='checkbox' id='6_2_2_2' name='6_2_2_2' value='Euros'>
+                    <label for='6_2_2_2'> 6.2.2.2. I.B.I. de naturaleza rústica: Valor catastral</label><br>
+                    <input type='checkbox' id='6_2_2_3' name='6_2_2_3' value='Euros'>
+                    <label for='6_2_2_3'> 6.2.2.3. I.B.I. de naturaleza rústica: Base imponible</label><br>
+                    <input type='checkbox' id='6_2_2_4' name='6_2_2_4' value='Euros'>
+                    <label for='6_2_2_4'> 6.2.2.4. I.B.I. de naturaleza rústica: Cuota íntegra</label><br>
+                    <input type='checkbox' id='6_2_2_5' name='6_2_2_5' value='Ha.'>
+                    <label for='6_2_2_5'> 6.2.2.5. I.B.I. de naturaleza rústica: Superficie imponible
+                      (1990-2002)</label><br>
+                  </form>
+                </div>
+                <li id='hacienda_estCatastrales_parcelas'>6.2.3. Catastro inmobiliario urbano: Parcelas</li>
+                <div id='div_hacienda_estCatastrales_parcelas'>
+                  <form id='form_hacienda_estCatastrales_parcelas' class='seleccionCategorias'>
+                    <input type='checkbox' id='6_2_3_1' name='6_2_3_1' value='Parcelas catastrales'>
+                    <label for='6_2_3_1'> 6.2.3.1. Número de parcelas catastrales por tipo</label><br>
+                    <input type='checkbox' id='6_2_3_2' name='6_2_3_2' value='m²'>
+                    <label for='6_2_3_2'> 6.2.3.2. Superficie de parcelas catastrales por tipo</label><br>
+                    <input type='checkbox' id='6_2_3_3' name='6_2_3_3' value='Parcelas catastrales'>
+                    <label for='6_2_3_3'> 6.2.3.3. Parcelas edificadas por propiedad</label><br>
+                    <input type='checkbox' id='6_2_3_4' name='6_2_3_4' value='Parcelas'>
+                    <label for='6_2_3_4'> 6.2.3.4. Número de solares y parcelas edificadas según superficie</label><br>
+                    <input type='checkbox' id='6_2_3_5' name='6_2_3_5' value='Bienes inmuebles'>
+                    <label for='6_2_3_5'> 6.2.3.5. Bienes inmuebles por antigüedad de las construcciones</label><br>
+                    <input type='checkbox' id='6_2_3_6' name='6_2_3_6' value='Bienes inmuebles'>
+                    <label for='6_2_3_6'> 6.2.3.6. Bienes inmuebles según calidad constructiva</label><br>
+                    <input type='checkbox' id='6_2_3_7' name='6_2_3_7' value='Años'>
+                    <label for='6_2_3_7'> 6.2.3.7. Año de la última valoración</label><br>
+                  </form>
+                </div>
+              </ul>
+            </div>
+            <li id='iae'>6.3. Impuesto sobre actividades económicas</li>
+            <div id='hacienda_iae'>
+              <form id='form_hacienda_iae' class='seleccionCategorias'>
+                <input type='checkbox' id='6_3_1' name='6_3_1' value='Altas en el IAE'>
+                <label for='6_3_1'> 6.3.1. IAE: Actividades empresariales por divisiones</label><br>
+                <input type='checkbox' id='6_3_2' name='6_3_2' value='Altas en el IAE'>
+                <label for='6_3_2'> 6.3.2. IAE: Actividades profesionales por divisiones</label><br>
+                <input type='checkbox' id='6_3_3' name='6_3_3' value='Altas en el IAE'>
+                <label for='6_3_3'> 6.3.3. IAE: Actividades artísticas por agrupaciones</label><br>
+              </form>
+            </div>
+            <li id='irpf'>6.4. Impuesto sobre la renta de personas físicas</li>
+            <div id='hacienda_irpf'>
+              <form id='form_hacienda_irpf' class='seleccionCategorias'>
+                <input type='checkbox' id='6_4_1' name='6_4_1' value='Declaraciones'>
+                <label for='6_4_1'> 6.4.1. Número de declaraciones</label><br>
+                <input type='checkbox' id='6_4_2' name='6_4_2' value='Euros'>
+                <label for='6_4_2'> 6.4.2. Renta neta declarada por tipo de rendimiento</label><br>
+                <input type='checkbox' id='6_4_3' name='6_4_3' value='Euros'>
+                <label for='6_4_3'> 6.4.3. Renta neta media declarada</label><br>
+              </form>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div id='respuesta_servidor'> Cargando datos</div>
+    </div>
+  </div>
 </div>
