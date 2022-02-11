@@ -559,7 +559,12 @@ const configSimaQuery = {
   queryList: queryList,
   queryResult: queryResult,
   statusServer: statusServer,
-  timeResponse: timeResponse
+  timeResponse: timeResponse,
+  styles: {
+    municipioSeleccionado: municipioSeleccionado,
+    estiloMunicipio: estiloMunicipio,
+    categoriaProvincias: categoriaProvincias,
+  },
 }
 
 

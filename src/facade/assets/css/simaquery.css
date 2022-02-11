@@ -830,22 +830,7 @@ div.m-control.m-container.m-simaquery{
 #div_trabajo_trabEmpleo_afiliados{
   display: none;
 }
-#respuesta_servidor{
-  display: none;
-  width: 60%;
-  margin-left: 20%;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;  
-  animation: blinker 1s linear infinite;
-}
 
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
 
 table.resultado{
   

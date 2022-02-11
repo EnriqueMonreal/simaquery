@@ -68,11 +68,19 @@ export default class SimaQueryControl extends M.Control {
 
       this.menuLogic(html);
       this.config.limitesMunicipales.on(M.evt.SELECT_FEATURES, (features) => {
+        
+        let municipios = this.map_.getLayers({name: 'Municipios de Andalucía'})[0].getFeatures();
+        for(let i =0; i<municipios.length;i++){
+          municipios[i].setStyle(this.config.styles.estiloMunicipio);
+        }
+        
+        features[0].setStyle(this.config.styles.municipioSeleccionado);
+
         if (this.config.statusServer == true) {
           document.querySelectorAll('div.leyenda-title')[0].innerHTML = features[0].getImpl().getAttribute('nombre') + ' (' + features[0].getImpl().getAttribute('provincia') + ')';
           this.map_.getPanels('legend')[0].open();
           this.map_.getPanels('panelSimaQuery')[0].collapse();
-          //console.log(features[0].getImpl().getAttribute('nombre') + ' (' + features[0].getImpl().getAttribute('provincia') + ')');
+          
           this.responseData(features[0].getImpl().getAttribute('cod_mun'));
 
         }
@@ -89,7 +97,10 @@ export default class SimaQueryControl extends M.Control {
               if (this.config.queryList[i][0] == evt.srcElement.id) {
                 units = evt.srcElement.value;
                 this.queryFunction(this.config.queryList[i][1], true, units);
-
+                let municipios = this.map_.getLayers({name: 'Municipios de Andalucía'})[0].getFeatures();
+                for(let i =0; i<municipios.length;i++){
+                  municipios[i].setStyle(this.config.styles.estiloMunicipio);
+                }
                 
               }
             }
@@ -102,7 +113,7 @@ export default class SimaQueryControl extends M.Control {
               }
             }
 
-            //this.queryFunction(this.config.queryList[i][1], false, '');
+           
 
           }
         });
@@ -1033,12 +1044,12 @@ export default class SimaQueryControl extends M.Control {
    
     let queryGo = true;
     document.querySelectorAll('div.loading')[0].setAttribute("style", "display: block;");
-    //document.getElementById('respuesta_servidor').setAttribute("style", "display: block;");
+    
     for (let i = 0; i < this.config.queryResult.length; i++) {
       if (this.config.queryResult[i][0] == query) {
         this.config.queryResult[i][4] = visual;
         document.querySelectorAll('div.loading')[0].setAttribute("style", "display: none;");
-        //document.getElementById('respuesta_servidor').setAttribute("style", "display: none;");
+        
         queryGo = false;
       }
     }
@@ -1101,7 +1112,7 @@ export default class SimaQueryControl extends M.Control {
           this.config.queryResult.push([query, request.response.metainfo.title, respuesta, tipData, visual, units]);
           this.config.statusServer = true;
           document.querySelectorAll('div.loading')[0].setAttribute("style", "display: none;");
-          //document.getElementById('respuesta_servidor').setAttribute("style", "display: none;");
+          
           this.config.timeResponse -= new Date();
           this.config.timeResponse =this.config.timeResponse * -1;          
           request.abort();
