@@ -49,41 +49,57 @@ export default class SimaQueryControl extends M.Control {
   addEvents(html) {
 
     this.map_.on(M.evt.COMPLETED, () => {
-      
-      let cargando=document.createElement('div');
-      cargando.innerHTML='<img src="../../../src/facade/assets/images/loading-6.gif"/>';
-      cargando.className='loading';
+
+      let cargando = document.createElement('div');
+      cargando.innerHTML = '<img src="../../../src/facade/assets/images/loading-6.gif"/><p>Cargando datos</p>';
+      cargando.className = 'loading';
       let nodo = document.querySelectorAll('div#mapjs')[0];
 
-      document.body.insertBefore(cargando,nodo);
+      document.body.insertBefore(cargando, nodo);
 
-      document.querySelectorAll('div.m-panel.m-leyenda>div.m-panel-controls')[0].innerHTML = "<div class='leyenda-title'></div><div class='leyenda'></div>";
 
-      document.querySelectorAll('div.m-areas>div.m-area.m-top.m-right>div.m-panel.collapsed')[0].addEventListener('click',()=>{
+
+
+      document.querySelectorAll('div.m-panel.m-leyenda>div.m-panel-controls')[0].innerHTML = "<div class='leyenda-title'></div><div class='leyenda'><div class='cuadro'></div></div>";
+
+      document.querySelectorAll('div.m-areas>div.m-area.m-top.m-right>div.m-panel.collapsed')[0].addEventListener('click', () => {
         this.map_.getPanels('legend')[0].collapse();
       });
-      document.querySelectorAll('div.m-areas>div.m-area.m-top.m-right>div.m-panel.m-leyenda.collapsed')[0].addEventListener('click',()=>{
+      document.querySelectorAll('div.m-areas>div.m-area.m-top.m-right>div.m-panel.m-leyenda.collapsed')[0].addEventListener('click', () => {
         this.map_.getPanels('panelSimaQuery')[0].collapse();
       });
 
       this.menuLogic(html);
       this.config.limitesMunicipales.on(M.evt.SELECT_FEATURES, (features) => {
-        
-        let municipios = this.map_.getLayers({name: 'Municipios de Andalucía'})[0].getFeatures();
-        for(let i =0; i<municipios.length;i++){
+        this.config.munSelect = features[0];
+
+        let municipios = this.map_.getLayers({ name: 'Municipios de Andalucía' })[0].getFeatures();
+        for (let i = 0; i < municipios.length; i++) {
           municipios[i].setStyle(this.config.styles.estiloMunicipio);
         }
-        
+
         features[0].setStyle(this.config.styles.municipioSeleccionado);
 
         if (this.config.statusServer == true) {
           document.querySelectorAll('div.leyenda-title')[0].innerHTML = features[0].getImpl().getAttribute('nombre') + ' (' + features[0].getImpl().getAttribute('provincia') + ')';
           this.map_.getPanels('legend')[0].open();
           this.map_.getPanels('panelSimaQuery')[0].collapse();
-          
+
           this.responseData(features[0].getImpl().getAttribute('cod_mun'));
 
         }
+      });
+
+      this.config.limitesProvincia.on(M.evt.HOVER_FEATURES, () => {
+
+        document.querySelectorAll('div.container.m-mapea-container')[0].setAttribute('style', 'cursor: pointer !important;');
+
+      });
+
+      this.config.limitesProvincia.on(M.evt.LEAVE_FEATURES, () => {
+
+        document.querySelectorAll('div.container.m-mapea-container')[0].setAttribute('style', 'cursor: default !important;');
+
       });
 
       //Añadimos eventos de funcionalidad a los formularios del menu
@@ -97,11 +113,12 @@ export default class SimaQueryControl extends M.Control {
               if (this.config.queryList[i][0] == evt.srcElement.id) {
                 units = evt.srcElement.value;
                 this.queryFunction(this.config.queryList[i][1], true, units);
-                let municipios = this.map_.getLayers({name: 'Municipios de Andalucía'})[0].getFeatures();
-                for(let i =0; i<municipios.length;i++){
-                  municipios[i].setStyle(this.config.styles.estiloMunicipio);
-                }
-                
+                //this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
+                // let municipios = this.map_.getLayers({name: 'Municipios de Andalucía'})[0].getFeatures();
+                // for(let i =0; i<municipios.length;i++){
+                //   municipios[i].setStyle(this.config.styles.estiloMunicipio);
+                // }
+                // this.map_.getFeatureHandler().unselectFeatures([this.config.munSelect], this.config.limitesMunicipales, {});
               }
             }
           } else {
@@ -109,11 +126,11 @@ export default class SimaQueryControl extends M.Control {
               if (this.config.queryList[i][0] == evt.srcElement.id) {
                 units = evt.srcElement.value;
                 this.queryFunction(this.config.queryList[i][1], false, units);
-                
+                this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
               }
             }
 
-           
+
 
           }
         });
@@ -1041,21 +1058,28 @@ export default class SimaQueryControl extends M.Control {
   }
 
   queryFunction(query, visual, units) {
-   
+
     let queryGo = true;
     document.querySelectorAll('div.loading')[0].setAttribute("style", "display: block;");
-    
+
     for (let i = 0; i < this.config.queryResult.length; i++) {
       if (this.config.queryResult[i][0] == query) {
         this.config.queryResult[i][4] = visual;
         document.querySelectorAll('div.loading')[0].setAttribute("style", "display: none;");
-        
+        this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
         queryGo = false;
       }
     }
-    
+
     if (queryGo == true) {
-      this.config.timeResponse= new Date();
+
+      let municipios = this.map_.getLayers({ name: 'Municipios de Andalucía' })[0].getFeatures();
+      for (let i = 0; i < municipios.length; i++) {
+        municipios[i].setStyle(this.config.styles.estiloMunicipio);
+      }
+
+      this.map_.getFeatureHandler().unselectFeatures([this.config.munSelect], this.config.limitesMunicipales, {});
+      this.config.timeResponse = new Date();
       this.map_.getPanels('legend')[0].collapse();
       this.config.statusServer = false;
       const request = new XMLHttpRequest();
@@ -1070,9 +1094,22 @@ export default class SimaQueryControl extends M.Control {
         let respuesta = new Array();
         let ignore = new Array();
 
+        for (let i = 0; i < request.response.hierarchies.length; i++) {
+          let registro = new Array();
+          registro.push(request.response.hierarchies[i].des);
+          registro.push(request.response.hierarchies[i].order);
+          registro.push(request.response.hierarchies[i].position);
+
+          tipData.push(registro);
+        }
 
         for (let i = 0; i < request.response.measures.length; i++) {
-          tipData.push(request.response.measures[i].des);
+          let registro = new Array();
+          registro.push(request.response.measures[i].des);
+          registro.push(request.response.measures[i].order);
+          registro.push(request.response.measures[i].position);
+
+          tipData.push(registro);
         }
 
         for (let i = 0; i < request.response.data[0].length; i++) {
@@ -1087,20 +1124,18 @@ export default class SimaQueryControl extends M.Control {
           arrayReg.push(reg[0].cod.pop());
           for (let t = 1; t < reg.length; t++) {
 
-            if (ignore.indexOf(t) == -1) {
-              if (reg[t].des) {
-                arrayReg.push(reg[t].des);
-
-              }
-              if (reg[t].format) {
-                arrayReg.push(reg[t].format);
-              }
-              if (reg[t].format === "") {
-                arrayReg.push('---');
-              }
-
+            if ((tipData[t][2] == 'c') && (reg[t].des)) {
+              arrayReg.push([reg[t].des, tipData[t][1]]);
             }
+            if ((tipData[t][2] == 'c') && (reg[t].format)) {
+              arrayReg.push([reg[t].format, 'value']);
+            }
+            if ((tipData[t][2] == 'c') && (reg[t].format === "")) {
+              arrayReg.push(['---', 'value']);
+            }
+
           }
+
           respuesta.push(arrayReg);
         }
 
@@ -1112,86 +1147,112 @@ export default class SimaQueryControl extends M.Control {
           this.config.queryResult.push([query, request.response.metainfo.title, respuesta, tipData, visual, units]);
           this.config.statusServer = true;
           document.querySelectorAll('div.loading')[0].setAttribute("style", "display: none;");
-          
+
           this.config.timeResponse -= new Date();
-          this.config.timeResponse =this.config.timeResponse * -1;          
+          this.config.timeResponse = this.config.timeResponse * -1;
           request.abort();
-          M.dialog.info('Tiempo de respuesta :' + Math.floor(this.config.timeResponse/1000) + ' segundos');
+          M.dialog.info('Tiempo de respuesta :' + Math.floor(this.config.timeResponse / 1000) + ' segundos');
         }
         console.log(this.config.queryResult);
 
+
       }
-
-
     }
-    
 
   }
   responseData(code) {
 
     let presentacion = '';
-    let cabecera='';
+    // let cabecera = [];
+    //let indicesCabecera = 0;
+    // let tipRep = false;
+
 
     for (let i = 0; i < this.config.queryResult.length; i++) {
       let encontrado = false;
       if (this.config.queryResult[i][4] == true) {
-        
+        let tipRep = false;
+        let cabecera = [];
+        let indicesCabecera = 0;
         presentacion += '<div><table class="resultado"><tr><th class="cabecera" colspan=2>' + this.config.queryResult[i][1] + ' (' + this.config.queryResult[i][5] + ')</th></tr>';
 
-
-        if (this.config.queryResult[i][3].length == 1) {
-          
-          for (let j = 0; j < this.config.queryResult[i][2].length; j++) {        //recorre todos los datos
-
-            if (this.config.queryResult[i][2][j][0].indexOf(code)!=-1) {
-              for (let t = 1; t < this.config.queryResult[i][2][j].length; t += 2) {
-                if((this.config.queryResult[i][2][j][t]==this.config.queryResult[i][2][j+1][t])&&(this.config.queryResult[i][2][j][t]!=cabecera)){
-                  cabecera = this.config.queryResult[i][2][j][t];
-                  presentacion +='<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t] + '</th></tr>';
-                  t+=1;
-                }
-                if(this.config.queryResult[i][2][j][t]==cabecera){
-                  t+=1;
-                }
-
-                if (this.config.queryResult[i][2][j][t + 1]) {
-                  presentacion += '<tr><th>' + this.config.queryResult[i][2][j][t] + '</th><td>' + this.config.queryResult[i][2][j][t + 1] + '</td></tr>';
-
-                } else {
-                  presentacion += '<tr><th>' + this.config.queryResult[i][3] + '</th><td>' + this.config.queryResult[i][2][j][t] + '</td></tr>';
-
-                }
-              }
-              encontrado = true;
-            }
-
+        for (let j = 1; j < this.config.queryResult[i][2][0].length; j++) {
+          if (this.config.queryResult[i][2][0][j][1] > indicesCabecera) {
+            indicesCabecera = this.config.queryResult[i][2][0][j][1];
           }
-          if (encontrado == false) {
-            presentacion += '<tr><th colspan=2>dato no encontrado</th></tr>';
-
+          if (this.config.queryResult[i][2][0][j][1] == 0) {
+            tipRep = true;
           }
-        } else {
-          for (let j = 0; j < this.config.queryResult[i][2].length; j++) {        //recorre todos los datos
+        }
 
-            if (this.config.queryResult[i][2][j][0].indexOf(code)!=-1) {
+
+        for (let j = 0; j < this.config.queryResult[i][2].length; j++) {
+          if (tipRep == true) {
+            
+            if (this.config.queryResult[i][2][j][0].indexOf(code) != -1) {
+
               for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {
-                presentacion += '<tr><th>' + this.config.queryResult[i][3][t - 1] + '</th><td>' + this.config.queryResult[i][2][j][t] + '</td></tr>';
-
+                if ((this.config.queryResult[i][2][j][t][1] < indicesCabecera) && (indicesCabecera > 0) && (!cabecera.includes(this.config.queryResult[i][2][j][t][0]))) {
+                  if(cabecera.length<indicesCabecera){
+                    cabecera.push(this.config.queryResult[i][2][j][t][0]);
+                    
+                  }
+                  if(cabecera.length==indicesCabecera){
+                    cabecera[this.config.queryResult[i][2][j][t][1]]=this.config.queryResult[i][2][j][t][0];
+                    
+                  }
+                  
+                  presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
+                }
+                if (this.config.queryResult[i][2][j][t][1] == indicesCabecera) {
+                  presentacion += '<tr><th>' + this.config.queryResult[i][2][j][t][0] + '</th>';
+                }
+                if (this.config.queryResult[i][2][j][t][1] == 'value') {
+                  presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>'
+                }
               }
               encontrado = true;
             }
           }
-          if (encontrado == false) {
-            presentacion += '<tr><th colspan=2>dato no encontrado</th></tr>';
-
+          if(tipRep==false){
+            let arrayTitulos = new Array();
+            for(let t=0;t<this.config.queryResult[i][3].length;t++){
+              if(this.config.queryResult[i][3][t][2]=='c'){
+                arrayTitulos.push(this.config.queryResult[i][3][t][0]);
+              }
+            }
+            if (this.config.queryResult[i][2][j][0].indexOf(code) != -1) {
+              
+              for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {                
+                
+                  presentacion += '<tr><th>' + arrayTitulos[t-1] + '</th>';
+                
+                
+                  presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>'
+                
+              }
+              encontrado = true;
+            }
           }
 
         }
-        presentacion += '</table></div>'
 
-        document.querySelectorAll('div.leyenda')[0].innerHTML = presentacion;
+        ///////////////////////////////////////////////////////////////////////////////
+
+
+
+        if (encontrado == false) {
+          presentacion += '<tr><th colspan=2>dato no encontrado</th></tr>';
+
+        }
+
+
+        presentacion += '</table><hr></div>'
+
+        document.querySelectorAll('div.cuadro')[0].innerHTML = presentacion;
       }
 
     }
   }
+
 }

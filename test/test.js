@@ -176,6 +176,8 @@ const provinciaSeleccionada = new M.style.Polygon({
 
 const respuesta = '';
 
+const munSelect ='';
+
 
 const queryList = [
   ['1_1_1_1', '28867'],
@@ -556,10 +558,12 @@ const statusServer = true;
 const timeResponse = 0;
 const configSimaQuery = {
   limitesMunicipales: limitesMunicipales,
+  limitesProvincia: limitesProvincia,
   queryList: queryList,
   queryResult: queryResult,
   statusServer: statusServer,
   timeResponse: timeResponse,
+  munSelect: munSelect,
   styles: {
     municipioSeleccionado: municipioSeleccionado,
     estiloMunicipio: estiloMunicipio,
