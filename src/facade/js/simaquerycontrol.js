@@ -1133,6 +1133,12 @@ export default class SimaQueryControl extends M.Control {
             if ((tipData[t][2] == 'c') && (reg[t].format === "")) {
               arrayReg.push(['---', 'value']);
             }
+            if ((tipData[t][2] == 'c') && (reg[t].format == "-")) {
+              arrayReg.push(['---', 'value']);
+            }
+            if ((tipData[t][2] == 'c') && (reg[t].format == "*")) {
+              arrayReg.push(['---', 'value']);
+            }
 
           }
 
@@ -1173,7 +1179,10 @@ export default class SimaQueryControl extends M.Control {
       if (this.config.queryResult[i][4] == true) {
         let tipRep = false;
         let cabecera = [];
+        
         let indicesCabecera = 0;
+        let contadorValores = 0;
+        let contadorDatos = 0;
         presentacion += '<div><table class="resultado"><tr><th class="cabecera" colspan=2>' + this.config.queryResult[i][1] + ' (' + this.config.queryResult[i][5] + ')</th></tr>';
 
         for (let j = 1; j < this.config.queryResult[i][2][0].length; j++) {
@@ -1183,25 +1192,40 @@ export default class SimaQueryControl extends M.Control {
           if (this.config.queryResult[i][2][0][j][1] == 0) {
             tipRep = true;
           }
+          if (this.config.queryResult[i][2][0][j][1] == 'value') {
+            contadorValores += 1;
+          }
+
+        }
+        for (let j = 0; j < this.config.queryResult[i][3].length; j++) {
+          if (this.config.queryResult[i][3][j][2] == 'c') {
+            contadorDatos += 1;
+          }
+        }
+
+        if ((tipRep == true) && (contadorDatos > contadorValores)) {
+          tipRep = false;
         }
 
 
+
         for (let j = 0; j < this.config.queryResult[i][2].length; j++) {
+
           if (tipRep == true) {
-            
+
             if (this.config.queryResult[i][2][j][0].indexOf(code) != -1) {
 
               for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {
                 if ((this.config.queryResult[i][2][j][t][1] < indicesCabecera) && (indicesCabecera > 0) && (!cabecera.includes(this.config.queryResult[i][2][j][t][0]))) {
-                  if(cabecera.length<indicesCabecera){
+                  if (cabecera.length < indicesCabecera) {
                     cabecera.push(this.config.queryResult[i][2][j][t][0]);
-                    
+
                   }
-                  if(cabecera.length==indicesCabecera){
-                    cabecera[this.config.queryResult[i][2][j][t][1]]=this.config.queryResult[i][2][j][t][0];
-                    
+                  if (cabecera.length == indicesCabecera) {
+                    cabecera[this.config.queryResult[i][2][j][t][1]] = this.config.queryResult[i][2][j][t][0];
+
                   }
-                  
+
                   presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
                 }
                 if (this.config.queryResult[i][2][j][t][1] == indicesCabecera) {
@@ -1214,29 +1238,49 @@ export default class SimaQueryControl extends M.Control {
               encontrado = true;
             }
           }
-          if(tipRep==false){
+
+          if (tipRep == false) {
             let arrayTitulos = new Array();
-            for(let t=0;t<this.config.queryResult[i][3].length;t++){
-              if(this.config.queryResult[i][3][t][2]=='c'){
+            for (let t = 0; t < this.config.queryResult[i][3].length; t++) {
+              if (this.config.queryResult[i][3][t][2] == 'c') {
                 arrayTitulos.push(this.config.queryResult[i][3][t][0]);
               }
             }
             if (this.config.queryResult[i][2][j][0].indexOf(code) != -1) {
               
-              for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {                
+              for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {
+
                 
-                  presentacion += '<tr><th>' + arrayTitulos[t-1] + '</th>';
-                
-                
-                  presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>'
-                
+                if((this.config.queryResult[i][2][j][t].includes(0))&&(!cabecera.includes(this.config.queryResult[i][2][j][t][0]))){
+                  cabecera.push(this.config.queryResult[i][2][j][t][0]);
+                  presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
+                  
+                }
+               
+                if (cabecera.includes(this.config.queryResult[i][2][j][t][0])) {
+                  t += 1;
+                }
+               
+
+                if(this.config.queryResult[i][2][j][t].includes('value')){
+
+                presentacion += '<tr><th>' + arrayTitulos[t - 1] + '</th>';
+
+
+                presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>';
+                }else{
+                  presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
+                }
+
               }
+              
               encontrado = true;
             }
+            
           }
 
         }
-
+        // console.log(cabecera);
         ///////////////////////////////////////////////////////////////////////////////
 
 
