@@ -108,7 +108,7 @@ export default class SimaQueryControl extends M.Control {
       for (let i = 0; i < html.querySelectorAll('form').length; i++) {
         html.querySelectorAll('form')[i].addEventListener('change', (evt) => {
           let units;
-          if (evt.target.checked) {             
+          if (evt.target.checked) {
             for (let i = 0; i < this.config.queryList.length; i++) {
               if (this.config.queryList[i][0] == evt.srcElement.id) {
                 units = evt.srcElement.value;
@@ -126,7 +126,9 @@ export default class SimaQueryControl extends M.Control {
               if (this.config.queryList[i][0] == evt.srcElement.id) {
                 units = evt.srcElement.value;
                 this.queryFunction(this.config.queryList[i][1], false, units);
-                this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
+                if (this.config.munSelect != '') {
+                  this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
+                }
               }
             }
 
@@ -1062,20 +1064,22 @@ export default class SimaQueryControl extends M.Control {
     let queryGo = true;
     document.querySelectorAll('div.loading')[0].setAttribute("style", "display: block;");
 
-    document.querySelectorAll('div.cuadro')[0].innerHTML=''; // elimina las tablas al generar una busqueda
+    document.querySelectorAll('div.cuadro')[0].innerHTML = ''; // elimina las tablas al generar una busqueda
 
     for (let i = 0; i < this.config.queryResult.length; i++) {
       if (this.config.queryResult[i][0] == query) {
         this.config.queryResult[i][4] = visual;
         document.querySelectorAll('div.loading')[0].setAttribute("style", "display: none;");
-        this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
+        if (this.config.munSelect != '') {
+          this.responseData(this.config.munSelect.getImpl().getAttribute('cod_mun'));
+        }
         queryGo = false;
       }
     }
 
     if (queryGo == true) {
 
-      
+
       let municipios = this.map_.getLayers({ name: 'Municipios de Andalucía' })[0].getFeatures();
       for (let i = 0; i < municipios.length; i++) {
         municipios[i].setStyle(this.config.styles.estiloMunicipio);
@@ -1088,7 +1092,7 @@ export default class SimaQueryControl extends M.Control {
       const request = new XMLHttpRequest();
       request.open('GET', 'https://www.ieca.junta-andalucia.es/intranet/admin/rest/v1.0/consulta/' + query);
       request.responseType = 'json';
-      
+
       request.send();
 
       request.onload = () => {
@@ -1098,6 +1102,8 @@ export default class SimaQueryControl extends M.Control {
         let tipData = new Array();
         let respuesta = new Array();
         let ignore = new Array();
+        let year = new Array();
+        let indexYear;
 
         for (let i = 0; i < request.response.hierarchies.length; i++) {
           let registro = new Array();
@@ -1150,12 +1156,24 @@ export default class SimaQueryControl extends M.Control {
           respuesta.push(arrayReg);
         }
 
+        // recogemos el año de los datos en el array year
+        for (let i = 0; i < tipData.length; i++) {
+          if (tipData[i][0] == 'Anual') {
+            indexYear = i;
+          }
+        }
+
+        for (let i = 0; i < request.response.data.length; i++) {
+          if (!year.includes(request.response.data[i][indexYear].des)) {
+            year.push(request.response.data[i][indexYear].des);
+          }
+        }
 
 
 
 
         if (request.status == 200) {
-          this.config.queryResult.push([query, request.response.metainfo.title, respuesta, tipData, visual, units]);
+          this.config.queryResult.push([query, request.response.metainfo.title, respuesta, tipData, visual, units, year]);
           this.config.statusServer = true;
           document.querySelectorAll('div.loading')[0].setAttribute("style", "display: none;");
 
@@ -1174,26 +1192,26 @@ export default class SimaQueryControl extends M.Control {
   responseData(code) {
 
     let presentacion = '';
-    let code1= code;
-    
+    let code1 = code;
+
 
 
     for (let i = 0; i < this.config.queryResult.length; i++) {
       let encontrado = false;
-      if(this.config.queryResult[i][0]=='40903'){
-        code1=code.slice(0,2);
-        
-      }else{
-        code1=code;
+      if (this.config.queryResult[i][0] == '40903') {
+        code1 = code.slice(0, 2);
+
+      } else {
+        code1 = code;
       }
       if (this.config.queryResult[i][4] == true) {
         let tipRep = false;
         let cabecera = [];
-        
+
         let indicesCabecera = 0;
         let contadorValores = 0;
         let contadorDatos = 0;
-        presentacion += '<div><table class="resultado"><tr><th class="cabecera" colspan=2>' + this.config.queryResult[i][1] + ' (' + this.config.queryResult[i][5] + ')</th></tr>';
+        presentacion += '<div><table class="resultado"><tr><th class="cabecera" colspan=2>' + this.config.queryResult[i][1] + ' (' + this.config.queryResult[i][5] + ')<br>(datos año ' + this.config.queryResult[i][6][0] + ')</th></tr>';
 
         for (let j = 1; j < this.config.queryResult[i][2][0].length; j++) {
           if (this.config.queryResult[i][2][0][j][1] > indicesCabecera) {
@@ -1257,36 +1275,36 @@ export default class SimaQueryControl extends M.Control {
               }
             }
             if (this.config.queryResult[i][2][j][0].indexOf(code1) != -1) {
-              
+
               for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {
 
-                
-                if((this.config.queryResult[i][2][j][t].includes(0))&&(!cabecera.includes(this.config.queryResult[i][2][j][t][0]))){
+
+                if ((this.config.queryResult[i][2][j][t].includes(0)) && (!cabecera.includes(this.config.queryResult[i][2][j][t][0]))) {
                   cabecera.push(this.config.queryResult[i][2][j][t][0]);
                   presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
-                  
+
                 }
-               
+
                 if (cabecera.includes(this.config.queryResult[i][2][j][t][0])) {
                   t += 1;
                 }
-               
-
-                if(this.config.queryResult[i][2][j][t].includes('value')){
-
-                presentacion += '<tr><th>' + arrayTitulos[t - 1] + '</th>';
 
 
-                presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>';
-                }else{
+                if (this.config.queryResult[i][2][j][t].includes('value')) {
+
+                  presentacion += '<tr><th>' + arrayTitulos[t - 1] + '</th>';
+
+
+                  presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>';
+                } else {
                   presentacion += '<tr><th class="cabecera3" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
                 }
 
               }
-              
+
               encontrado = true;
             }
-            
+
           }
 
         }
