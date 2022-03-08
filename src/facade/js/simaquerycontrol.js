@@ -1158,7 +1158,7 @@ export default class SimaQueryControl extends M.Control {
 
         // recogemos el año de los datos en el array year
         for (let i = 0; i < tipData.length; i++) {
-          if (tipData[i][0] == 'Anual') {
+          if ((tipData[i][0] == 'Anual')||(tipData[i][0]== 'Año')) {
             indexYear = i;
           }
         }
@@ -1211,7 +1211,7 @@ export default class SimaQueryControl extends M.Control {
         let indicesCabecera = 0;
         let contadorValores = 0;
         let contadorDatos = 0;
-        presentacion += '<div><table class="resultado"><tr><th class="cabecera" colspan=2>' + this.config.queryResult[i][1] + ' (' + this.config.queryResult[i][5] + ')<br>(datos año ' + this.config.queryResult[i][6][0] + ')</th></tr>';
+        presentacion += '<div><table class="resultado"><tr><th class="cabecera" colspan=2>' + this.config.queryResult[i][1] + ' (' + this.config.queryResult[i][5] + ')<br>(' + this.config.queryResult[i][6][0] + ')</th></tr>';
 
         for (let j = 1; j < this.config.queryResult[i][2][0].length; j++) {
           if (this.config.queryResult[i][2][0][j][1] > indicesCabecera) {
@@ -1257,7 +1257,7 @@ export default class SimaQueryControl extends M.Control {
                   presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
                 }
                 if (this.config.queryResult[i][2][j][t][1] == indicesCabecera) {
-                  presentacion += '<tr><th>' + this.config.queryResult[i][2][j][t][0] + '</th>';
+                  presentacion += '<tr><th class="dato">' + this.config.queryResult[i][2][j][t][0] + '</th>';
                 }
                 if (this.config.queryResult[i][2][j][t][1] == 'value') {
                   presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>'
@@ -1292,7 +1292,7 @@ export default class SimaQueryControl extends M.Control {
 
                 if (this.config.queryResult[i][2][j][t].includes('value')) {
 
-                  presentacion += '<tr><th>' + arrayTitulos[t - 1] + '</th>';
+                  presentacion += '<tr><th class="dato">' + arrayTitulos[t - 1] + '</th>';
 
 
                   presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>';

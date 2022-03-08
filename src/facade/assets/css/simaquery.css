@@ -864,12 +864,19 @@ table.resultado th {
   padding-top: 3px;
   padding-bottom: 3px;
   color: #000000;
-  font-weight: bold;
+  /* font-weight: bold; */
+  /* font-style: italic; */
   /* border-collapse: collapse; */
   background-color: #c6f3ee;
   border-bottom: 1px solid #00796B;
   /* border: 0px 0px 1px 0px solid black; */
   width: 70% !important;
+}
+
+.dato{
+  /* font-style: italic; */
+  font-weight: normal;
+  font-size: 13px !important;
 }
 
 th.cabecera {
@@ -878,6 +885,7 @@ th.cabecera {
   padding-right: 10px;
   font-size: 14px;
   text-transform: uppercase;
+  font-weight: bold;
   /* color:#ffffff !important; */
  
 }
@@ -886,8 +894,9 @@ th.cabecera2 {
   background-color: #bfd4d2 !important;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 12px;
+  font-size: 13px !important;
   text-transform: uppercase;
+  font-weight: bold !important;
   /* color:#ffffff !important; */
  
 }
@@ -896,8 +905,9 @@ th.cabecera3 {
   background-color: #d8e7e6 !important;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 12px;
+  font-size: 13px !important;
   text-transform: uppercase;
+  font-weight:normal !important;
   /* color:#ffffff !important; */
  
 }
