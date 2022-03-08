@@ -108,7 +108,7 @@ export default class SimaQueryControl extends M.Control {
       for (let i = 0; i < html.querySelectorAll('form').length; i++) {
         html.querySelectorAll('form')[i].addEventListener('change', (evt) => {
           let units;
-          if (evt.target.checked) {
+          if (evt.target.checked) {             
             for (let i = 0; i < this.config.queryList.length; i++) {
               if (this.config.queryList[i][0] == evt.srcElement.id) {
                 units = evt.srcElement.value;
@@ -1062,6 +1062,8 @@ export default class SimaQueryControl extends M.Control {
     let queryGo = true;
     document.querySelectorAll('div.loading')[0].setAttribute("style", "display: block;");
 
+    document.querySelectorAll('div.cuadro')[0].innerHTML=''; // elimina las tablas al generar una busqueda
+
     for (let i = 0; i < this.config.queryResult.length; i++) {
       if (this.config.queryResult[i][0] == query) {
         this.config.queryResult[i][4] = visual;
@@ -1073,6 +1075,7 @@ export default class SimaQueryControl extends M.Control {
 
     if (queryGo == true) {
 
+      
       let municipios = this.map_.getLayers({ name: 'Municipios de Andalucía' })[0].getFeatures();
       for (let i = 0; i < municipios.length; i++) {
         municipios[i].setStyle(this.config.styles.estiloMunicipio);
@@ -1085,11 +1088,13 @@ export default class SimaQueryControl extends M.Control {
       const request = new XMLHttpRequest();
       request.open('GET', 'https://www.ieca.junta-andalucia.es/intranet/admin/rest/v1.0/consulta/' + query);
       request.responseType = 'json';
+      
       request.send();
 
       request.onload = () => {
         console.log(request.response);
 
+        //request.response.setCharacterEncoding("UTF-8");
         let tipData = new Array();
         let respuesta = new Array();
         let ignore = new Array();
@@ -1133,12 +1138,12 @@ export default class SimaQueryControl extends M.Control {
             if ((tipData[t][2] == 'c') && (reg[t].format === "")) {
               arrayReg.push(['---', 'value']);
             }
-            if ((tipData[t][2] == 'c') && (reg[t].format == "-")) {
-              arrayReg.push(['---', 'value']);
-            }
-            if ((tipData[t][2] == 'c') && (reg[t].format == "*")) {
-              arrayReg.push(['---', 'value']);
-            }
+            // if ((tipData[t][2] == 'c') && (reg[t].format == "-")) {
+            //   arrayReg.push(['---', 'value']);
+            // }
+            // if ((tipData[t][2] == 'c') && (reg[t].format == "*")) {
+            //   arrayReg.push(['---', 'value']);
+            // }
 
           }
 
@@ -1169,13 +1174,18 @@ export default class SimaQueryControl extends M.Control {
   responseData(code) {
 
     let presentacion = '';
-    // let cabecera = [];
-    //let indicesCabecera = 0;
-    // let tipRep = false;
+    let code1= code;
+    
 
 
     for (let i = 0; i < this.config.queryResult.length; i++) {
       let encontrado = false;
+      if(this.config.queryResult[i][0]=='40903'){
+        code1=code.slice(0,2);
+        
+      }else{
+        code1=code;
+      }
       if (this.config.queryResult[i][4] == true) {
         let tipRep = false;
         let cabecera = [];
@@ -1213,7 +1223,7 @@ export default class SimaQueryControl extends M.Control {
 
           if (tipRep == true) {
 
-            if (this.config.queryResult[i][2][j][0].indexOf(code) != -1) {
+            if (this.config.queryResult[i][2][j][0].indexOf(code1) != -1) {
 
               for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {
                 if ((this.config.queryResult[i][2][j][t][1] < indicesCabecera) && (indicesCabecera > 0) && (!cabecera.includes(this.config.queryResult[i][2][j][t][0]))) {
@@ -1246,7 +1256,7 @@ export default class SimaQueryControl extends M.Control {
                 arrayTitulos.push(this.config.queryResult[i][3][t][0]);
               }
             }
-            if (this.config.queryResult[i][2][j][0].indexOf(code) != -1) {
+            if (this.config.queryResult[i][2][j][0].indexOf(code1) != -1) {
               
               for (let t = 1; t < this.config.queryResult[i][2][j].length; t++) {
 
@@ -1269,7 +1279,7 @@ export default class SimaQueryControl extends M.Control {
 
                 presentacion += '<td>' + this.config.queryResult[i][2][j][t][0] + '</td></tr>';
                 }else{
-                  presentacion += '<tr><th class="cabecera2" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
+                  presentacion += '<tr><th class="cabecera3" colspan=2>' + this.config.queryResult[i][2][j][t][0] + '</th></tr>';
                 }
 
               }

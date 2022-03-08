@@ -584,6 +584,11 @@ const mp = new SimaQuery(configSimaQuery);
 
 map.addPlugin(mp);
 
+//map.setZoom(1);
+
+// console.log(limitesProvincia.getMaxExtent());
+// map.setMaxExtent(limitesProvincia.getMaxExtent());
+
  //añade panel leyenda
 
  var panelLeyend = new M.ui.Panel('legend', {

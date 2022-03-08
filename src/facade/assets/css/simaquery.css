@@ -556,6 +556,7 @@ div.m-control.m-container.m-simaquery{
   
 }
 
+
 #div_entornoFisico_territorio_1 input[type=checkbox]:checked + label:before,
 #div_entornoFisico_territorio_2 input[type=checkbox]:checked + label:before,
 #div_entornoFisico_territorio_3 input[type=checkbox]:checked + label:before,
@@ -875,6 +876,8 @@ th.cabecera {
   background-color: #98c0bb !important;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
   /* color:#ffffff !important; */
  
 }
@@ -883,6 +886,18 @@ th.cabecera2 {
   background-color: #bfd4d2 !important;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  /* color:#ffffff !important; */
+ 
+}
+
+th.cabecera3 {
+  background-color: #d8e7e6 !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
   /* color:#ffffff !important; */
  
 }
@@ -964,4 +979,7 @@ div.cuadro hr{
   width: 90%;
  
 }
+
+
+
 
